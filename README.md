@@ -21,29 +21,3 @@ Este projeto é um guia de referência para todas as tags HTML5, organizado por 
 ## Licença
 
 livre para uso e modificação
-
-## Estrutura
-
-ESTUDO-FRONTEND/
-├── index.html
-├── readme.md
-├── css/
-│ ├── style.css
-│ └── dark-mode.css
-├── js/
-│ ├── script.js
-│ └── animations.js
-├── pages/
-│ ├── estrutura.html
-│ ├── metadados.html
-│ ├── conteudo.html
-│ ├── agrupamento.html
-│ ├── texto.html
-│ ├── midia.html
-│ ├── tabelas.html
-│ ├── formularios.html
-│ ├── interativo.html
-│ └── obsoletas.html
-└── ferramentas/
-├── atalhos.html
-└── extensoes.html
