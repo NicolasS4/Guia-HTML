@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulários HTML | Guia HTML5</title>
+    <meta name="description" content="Aprenda a criar formulários acessíveis e funcionais em HTML5">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/dark-mode.css" id="dark-mode" disabled>
+    <link rel="icon" href="https://img.icons8.com/color/48/000000/html-5.png">
+</head>
+
+<body>
+    <header>
+        <div class="header-container">
+            <a href="../index.html" class="logo">
+                <span class="logo-icon">HTML</span>
+                <span>Guia HTML5</span>
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="estrutura.html">Estrutura</a></li>
+                    <li><a href="metadados.html">Metadados</a></li>
+                    <li><a href="conteudo.html">Conteúdo</a></li>
+                    <li><a href="formularios.html">Formulários</a></li>
+                    <li><a href="../ferramentas/extensoes.html">Ferramentas</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <article class="content-article">
+            <header class="article-header">
+                <h1>Formulários HTML</h1>
+                <p class="article-excerpt">Elementos para criação de formulários interativos e acessíveis.</p>
+                <div class="article-meta">
+                    <span class="reading-time"><i class="far fa-clock"></i> 32 min de leitura</span>
+                    <span class="last-updated"><i class="far fa-calendar-alt"></i> Atualizado em: 15/08/2025</span>
+                </div>
+            </header>
+
+            <div class="article-content">
+                <section class="content-section animate-on-scroll">
+                    <h2>Elementos Básicos de Formulários</h2>
+
+                    <div class="tag-section">
+                        <h3><span class="tag">&lt;form&gt;</span> - Formulário</h3>
+                        <p>Container para elementos de entrada que serão enviados para um servidor.</p>
+                        <pre><code class="language-html">&lt;form action="/processar" method="post" novalidate&gt;
+    &lt;!-- Elementos do formulário --&gt;
+&lt;/form&gt;</code></pre>
+                        <div class="tag-attributes">
+                            <h4>Atributos Importantes:</h4>
+                            <ul>
+                                <li><code>action</code> - URL para enviar os dados</li>
+                                <li><code>method</code> - HTTP method (GET ou POST)</li>
+                                <li><code>novalidate</code> - Desativa validação nativa</li>
+                                <li><code>autocomplete</code> - Controla preenchimento automático</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="tag-section">
+                        <h3><span class="tag">&lt;input&gt;</span> - Campo de Entrada</h3>
+                        <p>Elemento versátil para vários tipos de entrada, dependendo do atributo <code>type</code>.</p>
+                        <pre><code class="language-html">&lt;input type="text" id="nome" name="nome" required&gt;</code></pre>
+                        <div class="tag-attributes">
+                            <h4>Atributos Comuns:</h4>
+                            <ul>
+                                <li><code>type</code> - Define o tipo de entrada (text, email, password, etc.)</li>
+                                <li><code>name</code> - Nome do campo para envio</li>
+                                <li><code>id</code> - Identificador único</li>
+                                <li><code>required</code> - Campo obrigatório</li>
+                                <li><code>placeholder</code> - Texto de exemplo</li>
+                                <li><code>pattern</code> - Expressão regular para validação</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="tag-section">
+                        <h3>Tipos de <span class="tag">&lt;input&gt;</span></h3>
+                        <p>HTML5 introduziu vários novos tipos de entrada para melhor semântica e validação:</p>
+
+                        <div class="input-types-grid">
+                            <div class="input-type-card">
+                                <h4>text</h4>
+                                <input type="text" placeholder="Texto simples" class="demo-input">
+                                <code>&lt;input type="text"&gt;</code>
+                            </div>
+
+                            <div class="input-type-card">
+                                <h4>email</h4>
+                                <input type="email" placeholder="email@exemplo.com" class="demo-input">
+                                <code>&lt;input type="email"&gt;</code>
+                            </div>
+
+                            <div class="input-type-card">
+                                <h4>password</h4>
+                                <input type="password" placeholder="Senha" class="demo-input">
+                                <code>&lt;input type="password"&gt;</code>
+                            </div>
+
+                            <div class="input-type-card">
+                                <h4>number</h4>
+                                <input type="number" placeholder="Número" min="1" max="10" class="demo-input">
+                                <code>&lt;input type="number"&gt;</code>
+                            </div>
+
+                            <div class="input-type-card">
+                                <h4>date</h4>
+                                <input type="date" class="demo-input">
+                                <code>&lt;input type="date"&gt;</code>
+                            </div>
+
+                            <div class="input-type-card">
+                                <h4>color</h4>
+                                <input type="color" class="demo-input">
+                                <code>&lt;input type="color"&gt;</code>
+                            </div>
+
+                            <div class="input-type-card">
+                                <h4>range</h4>
+                                <input type="range" min="0" max="100" class="demo-input">
+                                <code>&lt;input type="range"&gt;</code>
+                            </div>
+
+                            <div class="input-type-card">
+                                <h4>checkbox</h4>
+                                <input type="checkbox" id="check-demo" class="demo-input">
+                                <label for="check-demo">Opção</label>
+                                <code>&lt;input type="checkbox"&gt;</code>
+                            </div>
+
+                            <div class="input-type-card">
+                                <h4>radio</h4>
+                                <input type="radio" id="radio1" name="radio-demo" class="demo-input">
+                                <label for="radio1">Opção 1</label>
+                                <code>&lt;input type="radio"&gt;</code>
+                            </div>
+
+                            <div class="input-type-card">
+                                <h4>file</h4>
+                                <input type="file" class="demo-input">
+                                <code>&lt;input type="file"&gt;</code>
+                            </div>
+
+                            <div class="input-type-card">
+                                <h4>search</h4>
+                                <input type="search" placeholder="Pesquisar..." class="demo-input">
+                                <code>&lt;input type="search"&gt;</code>
+                            </div>
+
+                            <div class="input-type-card">
+                                <h4>tel</h4>
+                                <input type="tel" placeholder="Telefone" class="demo-input">
+                                <code>&lt;input type="tel"&gt;</code>
+                            </div>
+
+                            <div class="input-type-card">
+                                <h4>url</h4>
+                                <input type="url" placeholder="https://exemplo.com" class="demo-input">
+                                <code>&lt;input type="url"&gt;</code>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tag-section">
+                        <h3><span class="tag">&lt;textarea&gt;</span> - Área de Texto</h3>
+                        <p>Campo para entrada de texto multilinha.</p>
+                        <pre><code class="language-html">&lt;textarea id="mensagem" name="mensagem" rows="4" cols="50"&gt;
+Texto padrão aqui
+&lt;/textarea&gt;</code></pre>
+                    </div>
+
+                    <div class="tag-section">
+                        <h3><span class="tag">&lt;select&gt;</span>, <span class="tag">&lt;option&gt;</span> e <span
+                                class="tag">&lt;optgroup&gt;</span></h3>
+                        <p>Criam listas suspensas de opções.</p>
+                        <pre><code class="language-html">&lt;select id="cidade" name="cidade"&gt;
+    &lt;optgroup label="Sudeste"&gt;
+        &lt;option value="sp"&gt;São Paulo&lt;/option&gt;
+        &lt;option value="rj"&gt;Rio de Janeiro&lt;/option&gt;
+    &lt;/optgroup&gt;
+    &lt;option value="outra"&gt;Outra&lt;/option&gt;
+&lt;/select&gt;</code></pre>
+                        <div class="tag-attributes">
+                            <h4>Atributos Úteis:</h4>
+                            <ul>
+                                <li><code>multiple</code> - Permite seleção múltipla</li>
+                                <li><code>size</code> - Número de opções visíveis</li>
+                                <li><code>selected</code> - Opção pré-selecionada</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="tag-section">
+                        <h3><span class="tag">&lt;button&gt;</span> - Botão</h3>
+                        <p>Elemento clicável que pode enviar formulários ou acionar ações.</p>
+                        <pre><code class="language-html">&lt;button type="submit"&gt;Enviar&lt;/button&gt;
+&lt;button type="reset"&gt;Limpar&lt;/button&gt;
+&lt;button type="button"&gt;Ação&lt;/button&gt;</code></pre>
+                    </div>
+                </section>
+
+                <section class="content-section animate-on-scroll">
+                    <h2>Elementos de Apoio a Formulários</h2>
+
+                    <div class="tag-section">
+                        <h3><span class="tag">&lt;label&gt;</span> - Rótulo</h3>
+                        <p>Associa um texto descritivo a um elemento de formulário, melhorando a acessibilidade.</p>
+                        <pre><code class="language-html">&lt;label for="nome"&gt;Nome Completo:&lt;/label&gt;
+&lt;input type="text" id="nome" name="nome"&gt;
+
+&lt;!-- Ou --&gt;
+&lt;label&gt;
+    &lt;input type="checkbox" name="termos"&gt;
+    Aceito os termos
+&lt;/label&gt;</code></pre>
+                    </div>
+
+                    <div class="tag-section">
+                        <h3><span class="tag">&lt;fieldset&gt;</span> e <span class="tag">&lt;legend&gt;</span></h3>
+                        <p>Agrupam elementos relacionados e fornecem um título para o grupo.</p>
+                        <pre><code class="language-html">&lt;fieldset&gt;
+    &lt;legend&gt;Informações Pessoais&lt;/legend&gt;
+    &lt;!-- Campos do formulário --&gt;
+&lt;/fieldset&gt;</code></pre>
+                    </div>
+
+                    <div class="tag-section">
+                        <h3><span class="tag">&lt;datalist&gt;</span> - Lista de Sugestões</h3>
+                        <p>Fornece uma lista de opções pré-definidas para um campo <code>&lt;input&gt;</code>.</p>
+                        <pre><code class="language-html">&lt;input list="browsers" name="browser"&gt;
+&lt;datalist id="browsers"&gt;
+    &lt;option value="Chrome"&gt;
+    &lt;option value="Firefox"&gt;
+    &lt;option value="Edge"&gt;
+&lt;/datalist&gt;</code></pre>
+                    </div>
+
+                    <div class="tag-section">
+                        <h3><span class="tag">&lt;output&gt;</span> - Resultado de Cálculo</h3>
+                        <p>Exibe o resultado de um cálculo ou ação do usuário.</p>
+                        <pre><code class="language-html">&lt;form oninput="result.value = parseInt(a.value) + parseInt(b.value)"&gt;
+    &lt;input type="number" id="a" value="10"&gt; +
+    &lt;input type="number" id="b" value="20"&gt; =
+    &lt;output name="result" for="a b"&gt;30&lt;/output&gt;
+&lt;/form&gt;</code></pre>
+                    </div>
+
+                    <div class="tag-section">
+                        <h3><span class="tag">&lt;progress&gt;</span> e <span class="tag">&lt;meter&gt;</span></h3>
+                        <p>Exibem progresso e medições escalares.</p>
+                        <pre><code class="language-html">&lt;!-- Barra de progresso --&gt;
+&lt;progress value="70" max="100"&gt;70%&lt;/progress&gt;
+
+&lt;!-- Medidor --&gt;
+&lt;meter value="6" min="0" max="10"&gt;6 de 10&lt;/meter&gt;</code></pre>
+                    </div>
+                </section>
+
+                <section class="content-section animate-on-scroll">
+                    <h2>Validação de Formulários</h2>
+                    <p>HTML5 introduziu validação nativa sem JavaScript:</p>
+
+                    <div class="validation-examples">
+                        <h3>Atributos de Validação</h3>
+                        <pre><code class="language-html">&lt;!-- Campo obrigatório --&gt;
+&lt;input type="text" required&gt;
+
+&lt;!-- Comprimento mínimo e máximo --&gt;
+&lt;input type="text" minlength="3" maxlength="20"&gt;
+
+&lt;!-- Valor mínimo e máximo --&gt;
+&lt;input type="number" min="1" max="100"&gt;
+
+&lt;!-- Padrão regex --&gt;
+&lt;input type="text" pattern="[A-Za-z]{3}"&gt;
+
+&lt;!-- Validação personalizada --&gt;
+&lt;input type="text" oninvalid="this.setCustomValidity('Por favor, preencha corretamente')"&gt;</code></pre>
+                    </div>
+
+                    <div class="best-practices">
+                        <div class="practice-card">
+                            <i class="fas fa-check-circle"></i>
+                            <h3>Use validação do lado do cliente</h3>
+                            <p>Para feedback imediato, mas sempre valide também no servidor.</p>
+                        </div>
+
+                        <div class="practice-card">
+                            <i class="fas fa-check-circle"></i>
+                            <h3>Mensagens claras</h3>
+                            <p>Personalize mensagens de erro com <code>setCustomValidity()</code>.</p>
+                        </div>
+
+                        <div class="practice-card">
+                            <i class="fas fa-check-circle"></i>
+                            <h3>Desative autocomplete</h3>
+                            <p>Para campos sensíveis: <code>autocomplete="off"</code>.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="content-section animate-on-scroll">
+                    <h2>Exemplo Completo de Formulário</h2>
+
+                    <pre><code class="language-html">&lt;form id="cadastro" action="/cadastro" method="post" novalidate&gt;
+    &lt;fieldset&gt;
+        &lt;legend&gt;Informações Pessoais&lt;/legend&gt;
+        
+        &lt;div class="form-group"&gt;
+            &lt;label for="nome"&gt;Nome Completo:&lt;/label&gt;
+            &lt;input type="text" id="nome" name="nome" required minlength="3"&gt;
+        &lt;/div&gt;
+        
+        &lt;div class="form-group"&gt;
+            &lt;label for="email"&gt;E-mail:&lt;/label&gt;
+            &lt;input type="email" id="email" name="email" required&gt;
+        &lt;/div&gt;
+        
+        &lt;div class="form-group"&gt;
+            &lt;label for="nascimento"&gt;Data de Nascimento:&lt;/label&gt;
+            &lt;input type="date" id="nascimento" name="nascimento" required&gt;
+        &lt;/div&gt;
+    &lt;/fieldset&gt;
+    
+    &lt;fieldset&gt;
+        &lt;legend&gt;Preferências&lt;/legend&gt;
+        
+        &lt;div class="form-group"&gt;
+            &lt;label for="cor"&gt;Cor Favorita:&lt;/label&gt;
+            &lt;input type="color" id="cor" name="cor" value="#ff0000"&gt;
+        &lt;/div&gt;
+        
+        &lt;div class="form-group"&gt;
+            &lt;label&gt;Interesses:&lt;/label&gt;
+            &lt;label&gt;&lt;input type="checkbox" name="interesses" value="tech"&gt; Tecnologia&lt;/label&gt;
+            &lt;label&gt;&lt;input type="checkbox" name="interesses" value="esportes"&gt; Esportes&lt;/label&gt;
+        &lt;/div&gt;
+        
+        &lt;div class="form-group"&gt;
+            &lt;label for="nota"&gt;Nota para nosso site:&lt;/label&gt;
+            &lt;input type="range" id="nota" name="nota" min="1" max="10"&gt;
+            &lt;output for="nota" id="nota-valor"&gt;5&lt;/output&gt;
+        &lt;/div&gt;
+    &lt;/fieldset&gt;
+    
+    &lt;div class="form-actions"&gt;
+        &lt;button type="submit"&gt;Enviar&lt;/button&gt;
+        &lt;button type="reset"&gt;Limpar&lt;/button&gt;
+    &lt;/div&gt;
+&lt;/form&gt;
+
+&lt;script&gt;
+    document.getElementById('nota').addEventListener('input', function() {
+        document.getElementById('nota-valor').value = this.value;
+    });
+&lt;/script&gt;</code></pre>
+                </section>
+            </div>
+
+            <footer class="article-footer">
+                <div class="navigation-links">
+                    <a href="tabelas.html" class="nav-link prev-link">
+                        <i class="fas fa-arrow-left"></i>
+                        <span>Anterior: Tabelas</span>
+                    </a>
+                    <a href="interativo.html" class="nav-link next-link">
+                        <span>Próximo: Conteúdo Interativo</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </footer>
+        </article>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-about">
+                <div class="footer-logo">
+                    <span class="logo-icon">HTML</span>
+                    <span>Guia HTML5</span>
+                </div>
+                <p>O guia mais completo de referência HTML5 na web. Todas as tags, exemplos práticos e boas práticas em
+                    um só lugar.</p>
+                <div class="social-links">
+                    <a href="https://github.com/NicolasS4" class="social-icon" aria-label="GitHub"><i
+                            class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/nicolas-almir-92773527a/" class="social-icon"
+                        aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-links">
+                <h3>Guia HTML</h3>
+                <ul>
+                    <li><a href="estrutura.html">Estrutura Básica</a></li>
+                    <li><a href="metadados.html">Metadados</a></li>
+                    <li><a href="conteudo.html">Seções de Conteúdo</a></li>
+                    <li><a href="texto.html">Textos e Semântica</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-links">
+                <h3>Recursos</h3>
+                <ul>
+                    <li><a href="midia.html">Imagens e Multimídia</a></li>
+                    <li><a href="tabelas.html">Tabelas</a></li>
+                    <li><a href="formularios.html">Formulários</a></li>
+                    <li><a href="interativo.html">Conteúdo Interativo</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-links">
+                <h3>Ferramentas</h3>
+                <ul>
+                    <li><a href="../ferramentas/extensoes.html">Extensões VS Code</a></li>
+                    <li><a href="../ferramentas/atalhos.html">Atalhos Úteis</a></li>
+                    <li><a href="https://nicolass4.github.io/portfolio-nicolas-almir/">Portfolio</a></li>
+                    <li><a href="https://nicolas.almir.br@gmail.com">Email</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="copyright">
+            <p>&copy; 2025 Guia Completo de HTML. Git Clone permitido.</p>
+        </div>
+    </footer>
+
+    <button id="dark-mode-toggle" class="theme-toggle" aria-label="Alternar modo escuro">
+        <i class="fas fa-moon"></i>
+    </button>
+
+    <a href="#" id="back-to-top" aria-label="Voltar ao topo">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <script src="../js/script.js"></script>
+    <script src="../js/animations.js"></script>
+</body>
+
+</html>

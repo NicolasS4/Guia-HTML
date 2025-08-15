@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agrupamento de Conteúdo | Guia HTML5</title>
+    <meta name="description" content="Aprenda sobre os elementos HTML para agrupamento e organização de conteúdo">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/dark-mode.css" id="dark-mode" disabled>
+    <link rel="icon" href="https://img.icons8.com/color/48/000000/html-5.png">
+</head>
+
+<body>
+    <header>
+        <div class="header-container">
+            <a href="../index.html" class="logo">
+                <span class="logo-icon">HTML</span>
+                <span>Guia HTML5</span>
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="estrutura.html">Estrutura</a></li>
+                    <li><a href="metadados.html">Metadados</a></li>
+                    <li><a href="conteudo.html">Conteúdo</a></li>
+                    <li><a href="formularios.html">Formulários</a></li>
+                    <li><a href="../ferramentas/extensoes.html">Ferramentas</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <article class="content-article">
+            <header class="article-header">
+                <h1>Agrupamento de Conteúdo</h1>
+                <p class="article-excerpt">Elementos HTML para organizar e agrupar conteúdo em blocos lógicos.</p>
+                <div class="article-meta">
+                    <span class="reading-time"><i class="far fa-clock"></i> 15 min de leitura</span>
+                    <span class="last-updated"><i class="far fa-calendar-alt"></i> Atualizado em: 15/08/2025</span>
+                </div>
+            </header>
+
+            <div class="article-content">
+                <section class="content-section animate-on-scroll">
+                    <h2>Elementos de Agrupamento</h2>
+                    <p>HTML oferece vários elementos para agrupar conteúdo relacionado, criando estrutura e organização
+                        na página.</p>
+                </section>
+
+                <section class="content-section animate-on-scroll">
+                    <h2>Elementos Básicos de Agrupamento</h2>
+
+                    <div class="tag-section">
+                        <h3><span class="tag">&lt;div&gt;</span> - Divisão Genérica</h3>
+                        <p>Container genérico sem significado semântico, usado para agrupar conteúdo para fins de estilo
+                            ou manipulação via JavaScript.</p>
+                        <pre><code class="language-html">&lt;div class="container"&gt;
+    &lt;h2&gt;Título&lt;/h2&gt;
+    &lt;p&gt;Conteúdo agrupado dentro de uma div.&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+                        <div class="best-practice">
+                            <i class="fas fa-check-circle"></i>
+                            <p>Prefira elementos semânticos quando possível. Use <code>&lt;div&gt;</code> apenas quando
+                                nenhum outro elemento for apropriado.</p>
+                        </div>
+                    </div>
+
+                    <div class="tag-section">
+                        <h3><span class="tag">&lt;span&gt;</span> - Container Inline</h3>
+                        <p>Container genérico inline sem significado semântico, usado para agrupar texto ou elementos
+                            inline para estilização.</p>
+                        <pre><code class="language-html">&lt;p&gt;Este é um &lt;span class="destaque"&gt;texto destacado&lt;/span&gt; no parágrafo.&lt;/p&gt;</code></pre>
+                    </div>
+
+                    <div class="tag-section">
+                        <h3><span class="tag">&lt;p&gt;</span> - Parágrafo</h3>
+                        <p>Representa um parágrafo de texto. Navegadores adicionam automaticamente margens antes e
+                            depois.</p>
+                        <pre><code class="language-html">&lt;p&gt;Este é um parágrafo de exemplo.&lt;/p&gt;
+&lt;p&gt;Este é outro parágrafo separado do anterior.&lt;/p&gt;</code></pre>
+                    </div>
+
+                    <div class="tag-section">
+                        <h3><span class="tag">&lt;hr&gt;</span> - Quebra Temática</h3>
+                        <p>Representa uma quebra temática entre elementos (como uma mudança de cena ou tópico). Exibido
+                            como uma linha horizontal.</p>
+                        <pre><code class="language-html">&lt;p&gt;Conteúdo da primeira seção.&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;Conteúdo da segunda seção, com tema diferente.&lt;/p&gt;</code></pre>
+                    </div>
+
+                    <div class="tag-section">
+                        <h3><span class="tag">&lt;pre&gt;</span> - Texto Pré-formatado</h3>
+                        <p>Exibe texto exatamente como escrito no código HTML, preservando espaços em branco e quebras
+                            de linha.</p>
+                        <pre><code class="language-html">&lt;pre&gt;
+    function hello() {
+        console.log("Hello, world!");
+    }
+&lt;/pre&gt;</code></pre>
+                    </div>
+
+                    <div class="tag-section">
+                        <h3><span class="tag">&lt;blockquote&gt;</span> - Citação Longa</h3>
+                        <p>Representa uma citação extensa de outra fonte. Normalmente renderizado com indentação.</p>
+                        <pre><code class="language-html">&lt;blockquote cite="https://exemplo.com/fonte"&gt;
+    &lt;p&gt;Esta é uma longa citação de outra fonte que deve ser destacada.&lt;/p&gt;
+&lt;/blockquote&gt;</code></pre>
+                        <div class="tag-attributes">
+                            <h4>Atributo:</h4>
+                            <ul>
+                                <li><code>cite</code> - URL da fonte da citação (opcional)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="content-section animate-on-scroll">
+                    <h2>Listas</h2>
+
+                    <div class="tag-section">
+                        <h3><span class="tag">&lt;ol&gt;</span> - Lista Ordenada</h3>
+                        <p>Lista numerada onde a ordem dos itens é importante.</p>
+                        <pre><code class="language-html">&lt;ol&gt;
+    &lt;li&gt;Primeiro item&lt;/li&gt;
+    &lt;li&gt;Segundo item&lt;/li&gt;
+    &lt;li&gt;Terceiro item&lt;/li&gt;
+&lt;/ol&gt;</code></pre>
+                        <div class="tag-attributes">
+                            <h4>Atributos:</h4>
+                            <ul>
+                                <li><code>reversed</code> - Inverte a numeração</li>
+                                <li><code>start</code> - Número inicial</li>
+                                <li><code>type</code> - Tipo de marcador (1, A, a, I, i)</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="tag-section">
+                        <h3><span class="tag">&lt;ul&gt;</span> - Lista Não Ordenada</h3>
+                        <p>Lista com marcadores onde a ordem dos itens não é importante.</p>
+                        <pre><code class="language-html">&lt;ul&gt;
+    &lt;li&gt;Item com marcador&lt;/li&gt;
+    &lt;li&gt;Outro item&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+                    </div>
+
+                    <div class="tag-section">
+                        <h3><span class="tag">&lt;li&gt;</span> - Item de Lista</h3>
+                        <p>Representa um item em uma lista (<code>&lt;ol&gt;</code> ou <code>&lt;ul&gt;</code>).</p>
+                        <pre><code class="language-html">&lt;li&gt;Item simples&lt;/li&gt;
+&lt;li value="5"&gt;Item com valor específico (para ol)&lt;/li&gt;</code></pre>
+                    </div>
+
+                    <div class="tag-section">
+                        <h3><span class="tag">&lt;dl&gt;</span> - Lista de Definições</h3>
+                        <p>Lista de termos e suas definições (como em um glossário).</p>
+                        <pre><code class="language-html">&lt;dl&gt;
+    &lt;dt&gt;HTML&lt;/dt&gt;
+    &lt;dd&gt;Linguagem de marcação para criar páginas web.&lt;/dd&gt;
+    
+    &lt;dt&gt;CSS&lt;/dt&gt;
+    &lt;dd&gt;Linguagem para estilizar páginas web.&lt;/dd&gt;
+&lt;/dl&gt;</code></pre>
+                        <div class="tag-attributes">
+                            <h4>Elementos Associados:</h4>
+                            <ul>
+                                <li><code>&lt;dt&gt;</code> - Termo a ser definido</li>
+                                <li><code>&lt;dd&gt;</code> - Definição do termo</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="content-section animate-on-scroll">
+                    <h2>Elementos para Conteúdo Incorporado</h2>
+
+                    <div class="tag-section">
+                        <h3><span class="tag">&lt;figure&gt;</span> e <span class="tag">&lt;figcaption&gt;</span></h3>
+                        <p>Representam conteúdo autônomo (como imagens, diagramas, códigos) com uma legenda opcional.
+                        </p>
+                        <pre><code class="language-html">&lt;figure&gt;
+    &lt;img src="imagem.jpg" alt="Descrição"&gt;
+    &lt;figcaption&gt;Legenda para a imagem&lt;/figcaption&gt;
+&lt;/figure&gt;</code></pre>
+                        <div class="best-practice">
+                            <i class="fas fa-check-circle"></i>
+                            <p>Use para agrupar imagens com suas legendas ou blocos de código com descrições.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="content-section animate-on-scroll">
+                    <h2>Exemplo Prático</h2>
+                    <p>Veja como esses elementos podem ser usados juntos:</p>
+
+                    <pre><code class="language-html">&lt;article&gt;
+    &lt;h2&gt;Receita de Bolo&lt;/h2&gt;
+    
+    &lt;figure&gt;
+        &lt;img src="bolo.jpg" alt="Bolo de chocolate"&gt;
+        &lt;figcaption&gt;Bolo de chocolate caseiro&lt;/figcaption&gt;
+    &lt;/figure&gt;
+    
+    &lt;div class="ingredientes"&gt;
+        &lt;h3&gt;Ingredientes&lt;/h3&gt;
+        &lt;ul&gt;
+            &lt;li&gt;2 xícaras de farinha&lt;/li&gt;
+            &lt;li&gt;1 xícara de açúcar&lt;/li&gt;
+            &lt;li&gt;3 ovos&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;
+    
+    &lt;div class="preparo"&gt;
+        &lt;h3&gt;Modo de Preparo&lt;/h3&gt;
+        &lt;ol&gt;
+            &lt;li&gt;Misture os ingredientes secos&lt;/li&gt;
+            &lt;li&gt;Adicione os ovos e misture bem&lt;/li&gt;
+            &lt;li&gt;Asse por 40 minutos&lt;/li&gt;
+        &lt;/ol&gt;
+    &lt;/div&gt;
+    
+    &lt;blockquote&gt;
+        &lt;p&gt;Esta receita foi passada de geração em geração em minha família.&lt;/p&gt;
+    &lt;/blockquote&gt;
+&lt;/article&gt;</code></pre>
+                </section>
+            </div>
+
+            <footer class="article-footer">
+                <div class="navigation-links">
+                    <a href="conteudo.html" class="nav-link prev-link">
+                        <i class="fas fa-arrow-left"></i>
+                        <span>Anterior: Seções de Conteúdo</span>
+                    </a>
+                    <a href="texto.html" class="nav-link next-link">
+                        <span>Próximo: Textos e Semântica</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </footer>
+        </article>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-about">
+                <div class="footer-logo">
+                    <span class="logo-icon">HTML</span>
+                    <span>Guia HTML5</span>
+                </div>
+                <p>O guia mais completo de referência HTML5 na web. Todas as tags, exemplos práticos e boas práticas em
+                    um só lugar.</p>
+                <div class="social-links">
+                    <a href="https://github.com/NicolasS4" class="social-icon" aria-label="GitHub"><i
+                            class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/nicolas-almir-92773527a/" class="social-icon"
+                        aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-links">
+                <h3>Guia HTML</h3>
+                <ul>
+                    <li><a href="estrutura.html">Estrutura Básica</a></li>
+                    <li><a href="metadados.html">Metadados</a></li>
+                    <li><a href="conteudo.html">Seções de Conteúdo</a></li>
+                    <li><a href="texto.html">Textos e Semântica</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-links">
+                <h3>Recursos</h3>
+                <ul>
+                    <li><a href="midia.html">Imagens e Multimídia</a></li>
+                    <li><a href="tabelas.html">Tabelas</a></li>
+                    <li><a href="formularios.html">Formulários</a></li>
+                    <li><a href="interativo.html">Conteúdo Interativo</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-links">
+                <h3>Ferramentas</h3>
+                <ul>
+                    <li><a href="../ferramentas/extensoes.html">Extensões VS Code</a></li>
+                    <li><a href="../ferramentas/atalhos.html">Atalhos Úteis</a></li>
+                    <li><a href="https://nicolass4.github.io/portfolio-nicolas-almir/">Portfolio</a></li>
+                    <li><a href="https://nicolas.almir.br@gmail.com">Email</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="copyright">
+            <p>&copy; 2025 Guia Completo de HTML. Git Clone permitido.</p>
+        </div>
+    </footer>
+
+    <button id="dark-mode-toggle" class="theme-toggle" aria-label="Alternar modo escuro">
+        <i class="fas fa-moon"></i>
+    </button>
+
+    <a href="#" id="back-to-top" aria-label="Voltar ao topo">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <script src="../js/script.js"></script>
+    <script src="../js/animations.js"></script>
+</body>
+
+</html>

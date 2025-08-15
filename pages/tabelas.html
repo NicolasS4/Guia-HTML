@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabelas HTML | Guia HTML5</title>
+    <meta name="description" content="Aprenda a criar tabelas acessíveis e semânticas em HTML5">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/dark-mode.css" id="dark-mode" disabled>
+    <link rel="icon" href="https://img.icons8.com/color/48/000000/html-5.png">
+</head>
+
+<body>
+    <header>
+        <div class="header-container">
+            <a href="../index.html" class="logo">
+                <span class="logo-icon">HTML</span>
+                <span>Guia HTML5</span>
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="estrutura.html">Estrutura</a></li>
+                    <li><a href="metadados.html">Metadados</a></li>
+                    <li><a href="conteudo.html">Conteúdo</a></li>
+                    <li><a href="formularios.html">Formulários</a></li>
+                    <li><a href="../ferramentas/extensoes.html">Ferramentas</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <article class="content-article">
+            <header class="article-header">
+                <h1>Tabelas HTML</h1>
+                <p class="article-excerpt">Estruturas para exibição de dados tabulares de forma acessível e semântica.
+                </p>
+                <div class="article-meta">
+                    <span class="reading-time"><i class="far fa-clock"></i> 20 min de leitura</span>
+                    <span class="last-updated"><i class="far fa-calendar-alt"></i> Atualizado em: 15/08/2025</span>
+                </div>
+            </header>
+
+            <div class="article-content">
+                <section class="content-section animate-on-scroll">
+                    <h2>Elementos Básicos de Tabelas</h2>
+
+                    <div class="tag-section">
+                        <h3><span class="tag">&lt;table&gt;</span> - Tabela</h3>
+                        <p>Elemento raiz que define uma tabela.</p>
+                        <pre><code class="language-html">&lt;table&gt;
+    &lt;!-- Conteúdo da tabela --&gt;
+&lt;/table&gt;</code></pre>
+                        <div class="best-practice">
+                            <i class="fas fa-check-circle"></i>
+                            <p>Use tabelas apenas para dados tabulares, não para layout de página.</p>
+                        </div>
+                    </div>
+
+                    <div class="tag-section">
+                        <h3><span class="tag">&lt;tr&gt;</span> - Linha da Tabela</h3>
+                        <p>Define uma linha na tabela.</p>
+                        <pre><code class="language-html">&lt;tr&gt;
+    &lt;!-- Células da linha --&gt;
+&lt;/tr&gt;</code></pre>
+                    </div>
+
+                    <div class="tag-section">
+                        <h3><span class="tag">&lt;td&gt;</span> - Célula de Dados</h3>
+                        <p>Define uma célula padrão que contém dados.</p>
+                        <pre><code class="language-html">&lt;td&gt;Conteúdo da célula&lt;/td&gt;</code></pre>
+                        <div class="tag-attributes">
+                            <h4>Atributos:</h4>
+                            <ul>
+                                <li><code>colspan</code> - Número de colunas que a célula ocupa</li>
+                                <li><code>rowspan</code> - Número de linhas que a célula ocupa</li>
+                                <li><code>headers</code> - Relaciona a célula com cabeçalhos</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="tag-section">
+                        <h3><span class="tag">&lt;th&gt;</span> - Célula de Cabeçalho</h3>
+                        <p>Define uma célula de cabeçalho que descreve uma coluna ou linha.</p>
+                        <pre><code class="language-html">&lt;th scope="col"&gt;Nome da Coluna&lt;/th&gt;</code></pre>
+                        <div class="tag-attributes">
+                            <h4>Atributos Importantes:</h4>
+                            <ul>
+                                <li><code>scope</code> - Define o escopo do cabeçalho (col, row, colgroup, rowgroup)
+                                </li>
+                                <li><code>abbr</code> - Versão abreviada do conteúdo</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="content-section animate-on-scroll">
+                    <h2>Elementos de Estrutura de Tabelas</h2>
+
+                    <div class="tag-section">
+                        <h3><span class="tag">&lt;caption&gt;</span> - Legenda</h3>
+                        <p>Fornece um título ou descrição para a tabela.</p>
+                        <pre><code class="language-html">&lt;caption&gt;Lista de Funcionários por Departamento&lt;/caption&gt;</code></pre>
+                        <div class="best-practice">
+                            <i class="fas fa-check-circle"></i>
+                            <p>Deve ser o primeiro elemento dentro de <code>&lt;table&gt;</code> para melhor
+                                acessibilidade.</p>
+                        </div>
+                    </div>
+
+                    <div class="tag-section">
+                        <h3><span class="tag">&lt;thead&gt;</span>, <span class="tag">&lt;tbody&gt;</span> e <span
+                                class="tag">&lt;tfoot&gt;</span></h3>
+                        <p>Agrupam linhas em cabeçalho, corpo e rodapé da tabela.</p>
+                        <pre><code class="language-html">&lt;table&gt;
+    &lt;caption&gt;Vendas Mensais&lt;/caption&gt;
+    &lt;thead&gt;
+        &lt;tr&gt;&lt;th&gt;Mês&lt;/th&gt;&lt;th&gt;Vendas&lt;/th&gt;&lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;&lt;td&gt;Janeiro&lt;/td&gt;&lt;td&gt;R$ 1000&lt;/td&gt;&lt;/tr&gt;
+    &lt;/tbody&gt;
+    &lt;tfoot&gt;
+        &lt;tr&gt;&lt;td&gt;Total&lt;/td&gt;&lt;td&gt;R$ 1000&lt;/td&gt;&lt;/tr&gt;
+    &lt;/tfoot&gt;
+&lt;/table&gt;</code></pre>
+                        <div class="best-practice">
+                            <i class="fas fa-check-circle"></i>
+                            <p>Esses elementos melhoram a acessibilidade e permitem estilização diferenciada.</p>
+                        </div>
+                    </div>
+
+                    <div class="tag-section">
+                        <h3><span class="tag">&lt;colgroup&gt;</span> e <span class="tag">&lt;col&gt;</span></h3>
+                        <p>Permitem aplicar estilos a colunas inteiras sem repetir em cada célula.</p>
+                        <pre><code class="language-html">&lt;colgroup&gt;
+    &lt;col span="2" style="background-color: #f5f5f5;"&gt;
+    &lt;col style="background-color: #e9e9e9;"&gt;
+&lt;/colgroup&gt;</code></pre>
+                    </div>
+                </section>
+
+                <section class="content-section animate-on-scroll">
+                    <h2>Tabelas Acessíveis</h2>
+                    <p>Para criar tabelas acessíveis, siga estas práticas recomendadas:</p>
+
+                    <div class="accessible-table-example">
+                        <h3>Exemplo de Tabela Acessível</h3>
+                        <pre><code class="language-html">&lt;table&gt;
+    &lt;caption&gt;Horário de Funcionamento&lt;/caption&gt;
+    &lt;thead&gt;
+        &lt;tr&gt;
+            &lt;th scope="col"&gt;Dia&lt;/th&gt;
+            &lt;th scope="col"&gt;Abertura&lt;/th&gt;
+            &lt;th scope="col"&gt;Fechamento&lt;/th&gt;
+        &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;th scope="row"&gt;Segunda a Sexta&lt;/th&gt;
+            &lt;td&gt;09:00&lt;/td&gt;
+            &lt;td&gt;18:00&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;th scope="row"&gt;Sábado&lt;/th&gt;
+            &lt;td&gt;10:00&lt;/td&gt;
+            &lt;td&gt;14:00&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;</code></pre>
+                    </div>
+
+                    <div class="best-practices">
+                        <div class="practice-card">
+                            <i class="fas fa-check-circle"></i>
+                            <h3>Use <code>&lt;th&gt;</code> e <code>scope</code></h3>
+                            <p>Identifique claramente cabeçalhos e seu escopo (coluna ou linha).</p>
+                        </div>
+
+                        <div class="practice-card">
+                            <i class="fas fa-check-circle"></i>
+                            <h3>Adicione <code>&lt;caption&gt;</code></h3>
+                            <p>Forneça um título descritivo para a tabela.</p>
+                        </div>
+
+                        <div class="practice-card">
+                            <i class="fas fa-check-circle"></i>
+                            <h3>Estruture com <code>&lt;thead&gt;</code>, <code>&lt;tbody&gt;</code>,
+                                <code>&lt;tfoot&gt;</code>
+                            </h3>
+                            <p>Agrupe linhas semanticamente para melhor organização.</p>
+                        </div>
+
+                        <div class="practice-card">
+                            <i class="fas fa-check-circle"></i>
+                            <h3>Evite células mescladas complexas</h3>
+                            <p><code>colspan</code> e <code>rowspan</code> podem dificultar a acessibilidade.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="content-section animate-on-scroll">
+                    <h2>Tabelas Responsivas</h2>
+                    <p>Técnicas para fazer tabelas funcionarem em dispositivos móveis:</p>
+
+                    <div class="responsive-methods">
+                        <h3>Método 1: Scroll Horizontal</h3>
+                        <pre><code class="language-css">.table-container {
+    overflow-x: auto;
+    max-width: 100%;
+}</code></pre>
+
+                        <h3>Método 2: Reformatação</h3>
+                        <pre><code class="language-css">@media (max-width: 600px) {
+    table, thead, tbody, th, td, tr {
+        display: block;
+    }
+    
+    thead tr {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+    
+    td {
+        position: relative;
+        padding-left: 50%;
+    }
+    
+    td:before {
+        position: absolute;
+        left: 6px;
+        content: attr(data-label);
+        font-weight: bold;
+    }
+}</code></pre>
+                        <p>Combine com <code>data-label</code> nas células <code>&lt;td&gt;</code>:</p>
+                        <pre><code class="language-html">&lt;td data-label="Nome"&gt;João Silva&lt;/td&gt;</code></pre>
+                    </div>
+                </section>
+            </div>
+
+            <footer class="article-footer">
+                <div class="navigation-links">
+                    <a href="midia.html" class="nav-link prev-link">
+                        <i class="fas fa-arrow-left"></i>
+                        <span>Anterior: Imagens e Multimídia</span>
+                    </a>
+                    <a href="formularios.html" class="nav-link next-link">
+                        <span>Próximo: Formulários</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </footer>
+        </article>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-about">
+                <div class="footer-logo">
+                    <span class="logo-icon">HTML</span>
+                    <span>Guia HTML5</span>
+                </div>
+                <p>O guia mais completo de referência HTML5 na web. Todas as tags, exemplos práticos e boas práticas em
+                    um só lugar.</p>
+                <div class="social-links">
+                    <a href="https://github.com/NicolasS4" class="social-icon" aria-label="GitHub"><i
+                            class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/nicolas-almir-92773527a/" class="social-icon"
+                        aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-links">
+                <h3>Guia HTML</h3>
+                <ul>
+                    <li><a href="estrutura.html">Estrutura Básica</a></li>
+                    <li><a href="metadados.html">Metadados</a></li>
+                    <li><a href="conteudo.html">Seções de Conteúdo</a></li>
+                    <li><a href="texto.html">Textos e Semântica</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-links">
+                <h3>Recursos</h3>
+                <ul>
+                    <li><a href="midia.html">Imagens e Multimídia</a></li>
+                    <li><a href="tabelas.html">Tabelas</a></li>
+                    <li><a href="formularios.html">Formulários</a></li>
+                    <li><a href="interativo.html">Conteúdo Interativo</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-links">
+                <h3>Ferramentas</h3>
+                <ul>
+                    <li><a href="../ferramentas/extensoes.html">Extensões VS Code</a></li>
+                    <li><a href="../ferramentas/atalhos.html">Atalhos Úteis</a></li>
+                    <li><a href="https://nicolass4.github.io/portfolio-nicolas-almir/">Portfolio</a></li>
+                    <li><a href="https://nicolas.almir.br@gmail.com">Email</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="copyright">
+            <p>&copy; 2025 Guia Completo de HTML. Git Clone permitido.</p>
+        </div>
+    </footer>
+
+    <button id="dark-mode-toggle" class="theme-toggle" aria-label="Alternar modo escuro">
+        <i class="fas fa-moon"></i>
+    </button>
+
+    <a href="#" id="back-to-top" aria-label="Voltar ao topo">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <script src="../js/script.js"></script>
+    <script src="../js/animations.js"></script>
+</body>
+
+</html>

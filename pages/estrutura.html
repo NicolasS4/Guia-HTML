@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estrutura Básica do HTML | Guia HTML5</title>
+    <meta name="description" content="Aprenda sobre a estrutura básica de um documento HTML5 com exemplos práticos">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/dark-mode.css" id="dark-mode" disabled>
+    <link rel="icon" href="https://img.icons8.com/color/48/000000/html-5.png">
+</head>
+
+<body>
+    <header>
+        <div class="header-container">
+            <a href="../index.html" class="logo">
+                <span class="logo-icon">HTML</span>
+                <span>Guia HTML5</span>
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="estrutura.html">Estrutura</a></li>
+                    <li><a href="metadados.html">Metadados</a></li>
+                    <li><a href="conteudo.html">Conteúdo</a></li>
+                    <li><a href="formularios.html">Formulários</a></li>
+                    <li><a href="../ferramentas/extensoes.html">Ferramentas</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <article class="content-article">
+            <header class="article-header">
+                <h1>Estrutura Básica do HTML</h1>
+                <p class="article-excerpt">Entenda os elementos fundamentais que compõem todo documento HTML5.</p>
+                <div class="article-meta">
+                    <span class="reading-time"><i class="far fa-clock"></i> 40 min de leitura</span>
+                    <span class="last-updated"><i class="far fa-calendar-alt"></i> Atualizado em: 15/08/2025</span>
+                </div>
+            </header>
+
+            <div class="article-content">
+                <section class="content-section animate-on-scroll">
+                    <h2>Introdução</h2>
+                    <p>Todo documento HTML5 possui uma estrutura básica composta por elementos essenciais que servem
+                        como base para a construção de páginas web. Esta estrutura é reconhecida pelos navegadores e é
+                        fundamental para a renderização correta do conteúdo.</p>
+
+                    <div class="info-box">
+                        <i class="fas fa-info-circle"></i>
+                        <p>O HTML5 trouxe simplificações na declaração de documentos em comparação com versões
+                            anteriores do HTML e XHTML.</p>
+                    </div>
+                </section>
+
+                <section class="content-section animate-on-scroll">
+                    <h2>Elementos Fundamentais</h2>
+
+                    <div class="tag-section">
+                        <h3><span class="tag">
+                                <!DOCTYPE>
+                            </span> - Declaração do Tipo de Documento</h3>
+                        <p>A declaração <code><!DOCTYPE></code> deve ser a primeira linha em qualquer documento HTML.
+                            Ela informa ao navegador qual versão do HTML está sendo utilizada.</p>
+                        <pre><code class="language-html">&lt;!DOCTYPE html&gt;</code></pre>
+                        <div class="tag-attributes">
+                            <h4>Características:</h4>
+                            <ul>
+                                <li>Não é uma tag HTML, é uma instrução para o navegador</li>
+                                <li>No HTML5, a declaração é simplificada</li>
+                                <li>Deve ser escrita em letras maiúsculas para compatibilidade</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="tag-section">
+                        <h3><span class="tag">
+                                <html>
+                            </span> - Elemento Raiz</h3>
+                        <p>O elemento <code>&lt;html&gt;</code> é o container que engloba todo o conteúdo da página
+                            HTML, exceto a declaração <code><!DOCTYPE></code>.</p>
+                        <pre><code class="language-html">&lt;html lang="pt-BR"&gt;
+    &lt;!-- Todo o conteúdo da página --&gt;
+&lt;/html&gt;</code></pre>
+                        <div class="tag-attributes">
+                            <h4>Atributos Importantes:</h4>
+                            <ul>
+                                <li><code>lang</code> - Define o idioma principal do documento (importante para
+                                    acessibilidade e SEO)</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="tag-section">
+                        <h3><span class="tag">
+
+                                <head>
+                            </span> - Cabeçalho do Documento</h3>
+                        <p>O elemento <code>&lt;head&gt;</code> contém metadados sobre o documento, como título, links
+                            para folhas de estilo, scripts e outras informações que não são exibidas diretamente na
+                            página.</p>
+                        <pre><code class="language-html">&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Título da Página&lt;/title&gt;
+    &lt;link rel="stylesheet" href="estilos.css"&gt;
+&lt;/head&gt;</code></pre>
+                        <div class="tag-attributes">
+                            <h4>Elementos Comuns Dentro de &lt;head&gt;:</h4>
+                            <ul>
+                                <li><code>&lt;title&gt;</code> - Define o título da página (exibido na aba do navegador)
+                                </li>
+                                <li><code>&lt;meta&gt;</code> - Fornece metadados sobre o documento</li>
+                                <li><code>&lt;link&gt;</code> - Usado para vincular recursos externos como CSS</li>
+                                <li><code>&lt;style&gt;</code> - Para CSS interno</li>
+                                <li><code>&lt;script&gt;</code> - Para código JavaScript</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="tag-section">
+                        <h3><span class="tag">
+
+                                <body>
+                            </span> - Corpo do Documento</h3>
+                        <p>O elemento <code>&lt;body&gt;</code> contém todo o conteúdo visível da página web, incluindo
+                            textos, imagens, links, tabelas, listas, etc.</p>
+                        <pre><code class="language-html">&lt;body&gt;
+    &lt;h1&gt;Meu Primeiro Cabeçalho&lt;/h1&gt;
+    &lt;p&gt;Meu primeiro parágrafo.&lt;/p&gt;
+&lt;/body&gt;</code></pre>
+                        <div class="tag-attributes">
+                            <h4>Características:</h4>
+                            <ul>
+                                <li>Só pode haver um elemento <code>&lt;body&gt;</code> por documento</li>
+                                <li>Contém todos os elementos visíveis da página</li>
+                                <li>Pode conter atributos para manipulação via JavaScript</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="content-section animate-on-scroll">
+                    <h2>Exemplo Completo</h2>
+                    <p>Aqui está um exemplo completo de um documento HTML5 básico:</p>
+
+                    <pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html lang="pt-BR"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Minha Primeira Página&lt;/title&gt;
+    &lt;style&gt;
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;Bem-vindo ao Meu Site&lt;/h1&gt;
+    &lt;p&gt;Este é um parágrafo de exemplo em minha primeira página HTML.&lt;/p&gt;
+    &lt;script&gt;
+        console.log('Página carregada!');
+    &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+                </section>
+
+                <section class="content-section animate-on-scroll">
+                    <h2>Boas Práticas</h2>
+                    <div class="best-practices">
+                        <div class="practice-card">
+                            <i class="fas fa-check-circle"></i>
+                            <h3>Declaração DOCTYPE</h3>
+                            <p>Sempre inclua <code>&lt;!DOCTYPE html&gt;</code> como a primeira linha do seu documento
+                                para garantir que o navegador renderize no modo padrão.</p>
+                        </div>
+
+                        <div class="practice-card">
+                            <i class="fas fa-check-circle"></i>
+                            <h3>Atributo lang</h3>
+                            <p>Defina sempre o atributo <code>lang</code> no elemento <code>&lt;html&gt;</code> para
+                                melhorar a acessibilidade e SEO.</p>
+                        </div>
+
+                        <div class="practice-card">
+                            <i class="fas fa-check-circle"></i>
+                            <h3>Metadados Essenciais</h3>
+                            <p>Inclua sempre <code>charset="UTF-8"</code> e a meta tag viewport para garantir
+                                renderização adequada em dispositivos móveis.</p>
+                        </div>
+
+                        <div class="practice-card">
+                            <i class="fas fa-check-circle"></i>
+                            <h3>Estrutura Limpa</h3>
+                            <p>Mantenha uma estrutura bem organizada com indentação consistente para melhor legibilidade
+                                e manutenção.</p>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <footer class="article-footer">
+                <div class="navigation-links">
+                    <a href="../index.html" class="nav-link prev-link">
+                        <i class="fas fa-arrow-left"></i>
+                        <span>Voltar para Home</span>
+                    </a>
+                    <a href="metadados.html" class="nav-link next-link">
+                        <span>Próximo: Metadados</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+
+                <div class="article-actions">
+                    <button class="action-btn" onclick="window.print()">
+                        <i class="fas fa-print"></i> Imprimir
+                    </button>
+                    <button class="action-btn" onclick="copyArticleLink()">
+                        <i class="fas fa-link"></i> Copiar Link
+                    </button>
+                </div>
+            </footer>
+        </article>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-about">
+                <div class="footer-logo">
+                    <span class="logo-icon">HTML</span>
+                    <span>Guia HTML5</span>
+                </div>
+                <p>O guia mais completo de referência HTML5 na web. Todas as tags, exemplos práticos e boas práticas em
+                    um só lugar.</p>
+                <div class="social-links">
+                    <a href="https://github.com/NicolasS4" class="social-icon" aria-label="GitHub"><i
+                            class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/nicolas-almir-92773527a/" class="social-icon"
+                        aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-links">
+                <h3>Guia HTML</h3>
+                <ul>
+                    <li><a href="estrutura.html">Estrutura Básica</a></li>
+                    <li><a href="metadados.html">Metadados</a></li>
+                    <li><a href="conteudo.html">Seções de Conteúdo</a></li>
+                    <li><a href="texto.html">Textos e Semântica</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-links">
+                <h3>Recursos</h3>
+                <ul>
+                    <li><a href="midia.html">Imagens e Multimídia</a></li>
+                    <li><a href="tabelas.html">Tabelas</a></li>
+                    <li><a href="formularios.html">Formulários</a></li>
+                    <li><a href="interativo.html">Conteúdo Interativo</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-links">
+                <h3>Ferramentas</h3>
+                <ul>
+                    <li><a href="../ferramentas/extensoes.html">Extensões VS Code</a></li>
+                    <li><a href="../ferramentas/atalhos.html">Atalhos Úteis</a></li>
+                    <li><a href="https://nicolass4.github.io/portfolio-nicolas-almir/">Portfolio</a></li>
+                    <li><a href="https://nicolas.almir.br@gmail.com">Email</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="copyright">
+            <p>&copy; 2025 Guia Completo de HTML. Git Clone permitido.</p>
+        </div>
+    </footer>
+
+    <button id="dark-mode-toggle" class="theme-toggle" aria-label="Alternar modo escuro">
+        <i class="fas fa-moon"></i>
+    </button>
+
+    <a href="#" id="back-to-top" aria-label="Voltar ao topo">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <script src="../js/script.js"></script>
+    <script src="../js/animations.js"></script>
+    <script>
+        function copyArticleLink() {
+            const url = window.location.href;
+            navigator.clipboard.writeText(url).then(() => {
+                alert('Link copiado para a área de transferência!');
+            });
+        }
+    </script>
+</body>
+
+</html>

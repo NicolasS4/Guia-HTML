@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conteúdo Interativo | Guia HTML5</title>
+    <meta name="description" content="Aprenda sobre os elementos HTML para criação de conteúdo interativo e dinâmico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/dark-mode.css" id="dark-mode" disabled>
+    <link rel="icon" href="https://img.icons8.com/color/48/000000/html-5.png">
+</head>
+
+<body>
+    <header>
+        <div class="header-container">
+            <a href="../index.html" class="logo">
+                <span class="logo-icon">HTML</span>
+                <span>Guia HTML5</span>
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="estrutura.html">Estrutura</a></li>
+                    <li><a href="metadados.html">Metadados</a></li>
+                    <li><a href="conteudo.html">Conteúdo</a></li>
+                    <li><a href="formularios.html">Formulários</a></li>
+                    <li><a href="../ferramentas/extensoes.html">Ferramentas</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <article class="content-article">
+            <header class="article-header">
+                <h1>Conteúdo Interativo</h1>
+                <p class="article-excerpt">Elementos HTML para criação de componentes interativos e dinâmicos.</p>
+                <div class="article-meta">
+                    <span class="reading-time"><i class="far fa-clock"></i> 40 min de leitura</span>
+                    <span class="last-updated"><i class="far fa-calendar-alt"></i> Atualizado em: 15/08/2025</span>
+                </div>
+            </header>
+
+            <div class="article-content">
+                <section class="content-section animate-on-scroll">
+                    <h2>Elementos Interativos</h2>
+                    <p>HTML5 introduziu novos elementos para criar conteúdo interativo sem depender de JavaScript.</p>
+                </section>
+
+                <section class="content-section animate-on-scroll">
+                    <h2>Elementos de Interatividade</h2>
+
+                    <div class="tag-section">
+                        <h3><span class="tag">&lt;details&gt;</span> e <span class="tag">&lt;summary&gt;</span></h3>
+                        <p>Criam um widget de revelação que o usuário pode expandir/recolher.</p>
+                        <pre><code class="language-html">&lt;details&gt;
+    &lt;summary&gt;Mais Informações&lt;/summary&gt;
+    &lt;p&gt;Conteúdo detalhado que será mostrado quando expandido.&lt;/p&gt;
+&lt;/details&gt;</code></pre>
+                        <div class="tag-attributes">
+                            <h4>Atributos:</h4>
+                            <ul>
+                                <li><code>open</code> - Mostra o conteúdo inicialmente expandido</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="tag-section">
+                        <h3><span class="tag">&lt;dialog&gt;</span> - Caixa de Diálogo</h3>
+                        <p>Representa uma caixa de diálogo ou subjanela interativa.</p>
+                        <pre><code class="language-html">&lt;dialog open&gt;
+    &lt;p&gt;Esta é uma caixa de diálogo aberta!&lt;/p&gt;
+    &lt;button onclick="this.parentNode.close()"&gt;Fechar&lt;/button&gt;
+&lt;/dialog&gt;
+
+&lt;button onclick="document.getElementById('dialog').showModal()"&gt;
+    Abrir Diálogo
+&lt;/button&gt;
+
+&lt;dialog id="dialog"&gt;
+    &lt;p&gt;Conteúdo do diálogo modal.&lt;/p&gt;
+    &lt;button onclick="this.parentNode.close()"&gt;Fechar&lt;/button&gt;
+&lt;/dialog&gt;</code></pre>
+                        <div class="tag-attributes">
+                            <h4>Métodos:</h4>
+                            <ul>
+                                <li><code>show()</code> - Mostra diálogo não-modal</li>
+                                <li><code>showModal()</code> - Mostra como modal (bloqueia outros conteúdos)</li>
+                                <li><code>close()</code> - Fecha o diálogo</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="content-section animate-on-scroll">
+                    <h2>Exemplos Práticos</h2>
+
+                    <div class="interactive-demo">
+                        <h3>FAQ com <code>&lt;details&gt;</code></h3>
+
+                        <details class="faq-item">
+                            <summary>O que é HTML5?</summary>
+                            <div class="faq-content">
+                                <p>HTML5 é a quinta versão principal da linguagem HTML, trazendo novos elementos, APIs e
+                                    melhorias para criação de aplicações web modernas.</p>
+                            </div>
+                        </details>
+
+                        <details class="faq-item">
+                            <summary>Quais navegadores suportam esses elementos?</summary>
+                            <div class="faq-content">
+                                <p>Todos os navegadores modernos suportam <code>&lt;details&gt;</code> e
+                                    <code>&lt;dialog&gt;</code>. Para navegadores mais antigos, pode ser necessário um
+                                    polyfill.
+                                </p>
+                            </div>
+                        </details>
+                    </div>
+
+                    <div class="interactive-demo">
+                        <h3>Diálogo Modal</h3>
+                        <button id="open-dialog" class="btn">Abrir Diálogo</button>
+
+                        <dialog id="modal-demo">
+                            <h3>Confirmação</h3>
+                            <p>Você tem certeza que deseja realizar esta ação?</p>
+                            <div class="dialog-actions">
+                                <button id="confirm-btn" class="btn">Confirmar</button>
+                                <button id="cancel-btn" class="btn btn-outline">Cancelar</button>
+                            </div>
+                        </dialog>
+                    </div>
+                </section>
+
+                <section class="content-section animate-on-scroll">
+                    <h2>Elementos Obsoletos</h2>
+                    <p>Alguns elementos interativos antigos foram descontinuados no HTML5:</p>
+
+                    <div class="tag-section">
+                        <h3><span class="tag">&lt;menu&gt;</span> (antigo)</h3>
+                        <p>Originalmente destinado a menus de comandos, foi removido e depois reintroduzido com
+                            semântica diferente.</p>
+                        <div class="warning-box">
+                            <i class="fas fa-exclamation-triangle"></i>
+                            <p>Evite usar o elemento <code>&lt;menu&gt;</code> antigo. Para menus de navegação, prefira
+                                listas (<code>&lt;ul&gt;</code>) estilizadas.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="content-section animate-on-scroll">
+                    <h2>Melhores Práticas</h2>
+
+                    <div class="best-practices">
+                        <div class="practice-card">
+                            <i class="fas fa-check-circle"></i>
+                            <h3>Use JavaScript para interações complexas</h3>
+                            <p>Elementos nativos são limitados. Para experiências ricas, combine com JavaScript.</p>
+                        </div>
+
+                        <div class="practice-card">
+                            <i class="fas fa-check-circle"></i>
+                            <h3>Forneça alternativas acessíveis</h3>
+                            <p>Garanta que conteúdo interativo seja acessível via teclado e leitores de tela.</p>
+                        </div>
+
+                        <div class="practice-card">
+                            <i class="fas fa-check-circle"></i>
+                            <h3>Teste em vários navegadores</h3>
+                            <p>Alguns elementos podem ter comportamentos ou estilos diferentes entre navegadores.</p>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <footer class="article-footer">
+                <div class="navigation-links">
+                    <a href="formularios.html" class="nav-link prev-link">
+                        <i class="fas fa-arrow-left"></i>
+                        <span>Anterior: Formulários</span>
+                    </a>
+                    <a href="obsoletas.html" class="nav-link next-link">
+                        <span>Próximo: Tags Obsoletas</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </footer>
+        </article>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-about">
+                <div class="footer-logo">
+                    <span class="logo-icon">HTML</span>
+                    <span>Guia HTML5</span>
+                </div>
+                <p>O guia mais completo de referência HTML5 na web. Todas as tags, exemplos práticos e boas práticas em
+                    um só lugar.</p>
+                <div class="social-links">
+                    <a href="https://github.com/NicolasS4" class="social-icon" aria-label="GitHub"><i
+                            class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/nicolas-almir-92773527a/" class="social-icon"
+                        aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-links">
+                <h3>Guia HTML</h3>
+                <ul>
+                    <li><a href="estrutura.html">Estrutura Básica</a></li>
+                    <li><a href="metadados.html">Metadados</a></li>
+                    <li><a href="conteudo.html">Seções de Conteúdo</a></li>
+                    <li><a href="texto.html">Textos e Semântica</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-links">
+                <h3>Recursos</h3>
+                <ul>
+                    <li><a href="midia.html">Imagens e Multimídia</a></li>
+                    <li><a href="tabelas.html">Tabelas</a></li>
+                    <li><a href="formularios.html">Formulários</a></li>
+                    <li><a href="interativo.html">Conteúdo Interativo</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-links">
+                <h3>Ferramentas</h3>
+                <ul>
+                    <li><a href="../ferramentas/extensoes.html">Extensões VS Code</a></li>
+                    <li><a href="../ferramentas/atalhos.html">Atalhos Úteis</a></li>
+                    <li><a href="https://nicolass4.github.io/portfolio-nicolas-almir/">Portfolio</a></li>
+                    <li><a href="https://nicolas.almir.br@gmail.com">Email</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="copyright">
+            <p>&copy; 2025 Guia Completo de HTML. Git Clone permitido.</p>
+        </div>
+    </footer>
+
+    <button id="dark-mode-toggle" class="theme-toggle" aria-label="Alternar modo escuro">
+        <i class="fas fa-moon"></i>
+    </button>
+
+    <a href="#" id="back-to-top" aria-label="Voltar ao topo">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <script src="../js/script.js"></script>
+    <script src="../js/animations.js"></script>
+    <script>
+        //diálogo modal de exemplo
+        document.getElementById('open-dialog').addEventListener('click', function () {
+            document.getElementById('modal-demo').showModal();
+        });
+
+        document.getElementById('cancel-btn').addEventListener('click', function () {
+            document.getElementById('modal-demo').close();
+        });
+
+        document.getElementById('confirm-btn').addEventListener('click', function () {
+            alert('Ação confirmada!');
+            document.getElementById('modal-demo').close();
+        });
+    </script>
+</body>
+
+</html>

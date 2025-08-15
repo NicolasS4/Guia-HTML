@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Textos e Semântica | Guia HTML5</title>
+    <meta name="description"
+        content="Aprenda sobre os elementos semânticos para formatação e significado de texto em HTML5">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/dark-mode.css" id="dark-mode" disabled>
+    <link rel="icon" href="https://img.icons8.com/color/48/000000/html-5.png">
+</head>
+
+<body>
+    <header>
+        <div class="header-container">
+            <a href="../index.html" class="logo">
+                <span class="logo-icon">html</span>
+                <span>Guia HTML5</span>
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="estrutura.html">Estrutura</a></li>
+                    <li><a href="metadados.html">Metadados</a></li>
+                    <li><a href="conteudo.html">Conteúdo</a></li>
+                    <li><a href="formularios.html">Formulários</a></li>
+                    <li><a href="../ferramentas/extensoes.html">Ferramentas</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <article class="content-article">
+            <header class="article-header">
+                <h1>Textos e Semântica</h1>
+                <p class="article-excerpt">Elementos HTML para formatação e significado semântico de conteúdo textual.
+                </p>
+                <div class="article-meta">
+                    <span class="reading-time"><i class="far fa-clock"></i> 30 min de leitura</span>
+                    <span class="last-updated"><i class="far fa-calendar-alt"></i> Atualizado em: 15/08/2025</span>
+                </div>
+            </header>
+
+            <div class="article-content">
+                <section class="content-section animate-on-scroll">
+                    <h2>Introdução à Semântica Textual</h2>
+                    <p>HTML5 oferece elementos específicos para adicionar significado semântico ao conteúdo textual,
+                        melhorando a acessibilidade, SEO e manutenibilidade.</p>
+
+                    <div class="info-box">
+                        <i class="fas fa-info-circle"></i>
+                        <p>Elementos semânticos descrevem o significado do conteúdo, não apenas sua aparência visual.
+                        </p>
+                    </div>
+                </section>
+
+                <section class="content-section animate-on-scroll">
+                    <h2>Elementos Semânticos de Texto</h2>
+
+                    <div class="tag-section">
+                        <h3><span class="tag">&lt;a&gt;</span> - Link</h3>
+                        <p>Cria um hyperlink para outras páginas, arquivos, endereços de email ou qualquer URL.</p>
+                        <pre><code class="language-html">&lt;a href="https://exemplo.com" target="_blank" rel="noopener"&gt;Visite nosso site&lt;/a&gt;</code></pre>
+                        <div class="tag-attributes">
+                            <h4>Atributos Importantes:</h4>
+                            <ul>
+                                <li><code>href</code> - URL de destino</li>
+                                <li><code>target</code> - Onde abrir o link (_blank para nova aba)</li>
+                                <li><code>rel</code> - Relacionamento com o destino (noopener para segurança)</li>
+                                <li><code>download</code> - Força o download do recurso</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="tag-section">
+                        <h3><span class="tag">&lt;strong&gt;</span> - Importância Forte</h3>
+                        <p>Indica que o conteúdo tem forte importância, seriedade ou urgência. Normalmente renderizado
+                            em negrito.</p>
+                        <pre><code class="language-html">&lt;p&gt;&lt;strong&gt;Atenção:&lt;/strong&gt; Esta operação não pode ser desfeita.&lt;/p&gt;</code></pre>
+                        <div class="best-practice">
+                            <i class="fas fa-check-circle"></i>
+                            <p>Diferente de <code>&lt;b&gt;</code>, que apenas aplica negrito,
+                                <code>&lt;strong&gt;</code> tem significado semântico.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="tag-section">
+                        <h3><span class="tag">&lt;em&gt;</span> - Ênfase</h3>
+                        <p>Indica ênfase em um texto. Normalmente renderizado em itálico.</p>
+                        <pre><code class="language-html">&lt;p&gt;Eu &lt;em&gt;realmente&lt;/em&gt; preciso terminar este projeto.&lt;/p&gt;</code></pre>
+                        <div class="best-practice">
+                            <i class="fas fa-check-circle"></i>
+                            <p>Diferente de <code>&lt;i&gt;</code>, que apenas aplica itálico, <code>&lt;em&gt;</code>
+                                altera o significado da frase.</p>
+                        </div>
+                    </div>
+
+                    <div class="tag-section">
+                        <h3><span class="tag">&lt;mark&gt;</span> - Texto Destacado</h3>
+                        <p>Representa texto marcado ou destacado para fins de referência.</p>
+                        <pre><code class="language-html">&lt;p&gt;Procure por &lt;mark&gt;palavras-chave&lt;/mark&gt; no texto.&lt;/p&gt;</code></pre>
+                    </div>
+
+                    <div class="tag-section">
+                        <h3><span class="tag">&lt;small&gt;</span> - Texto Secundário</h3>
+                        <p>Representa comentários laterais e texto pequeno, como informações de direitos autorais.</p>
+                        <pre><code class="language-html">&lt;p&gt;Texto normal &lt;small&gt;com um comentário pequeno&lt;/small&gt;.&lt;/p&gt;</code></pre>
+                    </div>
+
+                    <div class="tag-section">
+                        <h3><span class="tag">&lt;del&gt;</span> e <span class="tag">&lt;ins&gt;</span> - Texto
+                            Removido/Inserido</h3>
+                        <p>Representam texto que foi removido (<code>&lt;del&gt;</code>) ou inserido
+                            (<code>&lt;ins&gt;</code>) no documento.</p>
+                        <pre><code class="language-html">&lt;p&gt;O custo é de &lt;del&gt;R$ 100&lt;/del&gt; &lt;ins&gt;R$ 80&lt;/ins&gt;.&lt;/p&gt;</code></pre>
+                    </div>
+
+                    <div class="tag-section">
+                        <h3><span class="tag">&lt;sub&gt;</span> e <span class="tag">&lt;sup&gt;</span> - Subscrito e
+                            Sobrescrito</h3>
+                        <p>Representam texto subscrito (<code>&lt;sub&gt;</code>) e sobrescrito
+                            (<code>&lt;sup&gt;</code>).</p>
+                        <pre><code class="language-html">&lt;p&gt;H&lt;sub&gt;2&lt;/sub&gt;O é a fórmula da água.&lt;/p&gt;
+&lt;p&gt;O teorema de Pitágoras: a&lt;sup&gt;2&lt;/sup&gt; + b&lt;sup&gt;2&lt;/sup&gt; = c&lt;sup&gt;2&lt;/sup&gt;.&lt;/p&gt;</code></pre>
+                    </div>
+                </section>
+
+                <section class="content-section animate-on-scroll">
+                    <h2>Elementos para Código e Dados</h2>
+
+                    <div class="tag-section">
+                        <h3><span class="tag">&lt;code&gt;</span> - Código Fonte</h3>
+                        <p>Exibe um fragmento de código de computador. Normalmente renderizado em fonte monoespaçada.
+                        </p>
+                        <pre><code class="language-html">&lt;p&gt;Use &lt;code&gt;console.log()&lt;/code&gt; para imprimir no console.&lt;/p&gt;</code></pre>
+                    </div>
+
+                    <div class="tag-section">
+                        <h3><span class="tag">&lt;kbd&gt;</span> - Entrada do Teclado</h3>
+                        <p>Representa entrada do usuário, como teclas do teclado ou comandos.</p>
+                        <pre><code class="language-html">&lt;p&gt;Pressione &lt;kbd&gt;Ctrl&lt;/kbd&gt; + &lt;kbd&gt;C&lt;/kbd&gt; para copiar.&lt;/p&gt;</code></pre>
+                    </div>
+
+                    <div class="tag-section">
+                        <h3><span class="tag">&lt;samp&gt;</span> - Saída de Amostra</h3>
+                        <p>Representa a saída de um programa ou sistema computacional.</p>
+                        <pre><code class="language-html">&lt;p&gt;O programa exibiu: &lt;samp&gt;Arquivo não encontrado&lt;/samp&gt;&lt;/p&gt;</code></pre>
+                    </div>
+
+                    <div class="tag-section">
+                        <h3><span class="tag">&lt;var&gt;</span> - Variável</h3>
+                        <p>Representa o nome de uma variável em expressões matemáticas ou contextos de programação.</p>
+                        <pre><code class="language-html">&lt;p&gt;A equação da reta é &lt;var&gt;y&lt;/var&gt; = &lt;var&gt;m&lt;/var&gt;&lt;var&gt;x&lt;/var&gt; + &lt;var&gt;b&lt;/var&gt;.&lt;/p&gt;</code></pre>
+                    </div>
+                </section>
+
+                <section class="content-section animate-on-scroll">
+                    <h2>Elementos para Datas e Abreviações</h2>
+
+                    <div class="tag-section">
+                        <h3><span class="tag">&lt;time&gt;</span> - Data/Hora</h3>
+                        <p>Representa um período específico no tempo, podendo incluir data e hora.</p>
+                        <pre><code class="language-html">&lt;p&gt;O evento ocorrerá em &lt;time datetime="2025-12-31"&gt;31 de dezembro&lt;/time&gt;.&lt;/p&gt;
+&lt;p&gt;Horário de abertura: &lt;time datetime="09:00"&gt;9h&lt;/time&gt; às &lt;time datetime="18:00"&gt;18h&lt;/time&gt;.&lt;/p&gt;</code></pre>
+                        <div class="tag-attributes">
+                            <h4>Atributo:</h4>
+                            <ul>
+                                <li><code>datetime</code> - Formato machine-readable da data/hora</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="tag-section">
+                        <h3><span class="tag">&lt;abbr&gt;</span> - Abreviação</h3>
+                        <p>Representa uma abreviação ou acrônimo, com explicação opcional.</p>
+                        <pre><code class="language-html">&lt;p&gt;A &lt;abbr title="World Wide Web"&gt;WWW&lt;/abbr&gt; foi criada em 1989.&lt;/p&gt;</code></pre>
+                        <div class="tag-attributes">
+                            <h4>Atributo:</h4>
+                            <ul>
+                                <li><code>title</code> - Explicação da abreviação (exibida como tooltip)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="content-section animate-on-scroll">
+                    <h2>Elementos de Formatação sem Semântica</h2>
+
+                    <div class="tag-section">
+                        <h3><span class="tag">&lt;b&gt;</span> - Negrito</h3>
+                        <p>Texto em negrito sem importância semântica adicional.</p>
+                        <pre><code class="language-html">&lt;p&gt;Este é um texto em &lt;b&gt;negrito&lt;/b&gt;.&lt;/p&gt;</code></pre>
+                        <div class="best-practice">
+                            <i class="fas fa-check-circle"></i>
+                            <p>Prefira <code>&lt;strong&gt;</code> quando o texto tiver importância semântica.</p>
+                        </div>
+                    </div>
+
+                    <div class="tag-section">
+                        <h3><span class="tag">&lt;i&gt;</span> - Itálico</h3>
+                        <p>Texto em itálico sem ênfase semântica adicional.</p>
+                        <pre><code class="language-html">&lt;p&gt;O termo &lt;i&gt;Homo sapiens&lt;/i&gt; é em latim.&lt;/p&gt;</code></pre>
+                        <div class="best-practice">
+                            <i class="fas fa-check-circle"></i>
+                            <p>Prefira <code>&lt;em&gt;</code> quando o texto precisar de ênfase semântica.</p>
+                        </div>
+                    </div>
+
+                    <div class="tag-section">
+                        <h3><span class="tag">&lt;u&gt;</span> - Sublinhado</h3>
+                        <p>Texto sublinhado. Evite usar para links para não confundir usuários.</p>
+                        <pre><code class="language-html">&lt;p&gt;Este texto contém um &lt;u&gt;erro ortográfico&lt;/u&gt;.&lt;/p&gt;</code></pre>
+                    </div>
+
+                    <div class="tag-section">
+                        <h3><span class="tag">&lt;br&gt;</span> - Quebra de Linha</h3>
+                        <p>Insere uma quebra de linha em um local específico.</p>
+                        <pre><code class="language-html">&lt;p&gt;Primeira linha&lt;br&gt;Segunda linha&lt;/p&gt;</code></pre>
+                        <div class="best-practice">
+                            <i class="fas fa-check-circle"></i>
+                            <p>Evite usar múltiplas <code>&lt;br&gt;</code> para criar espaçamento. Use CSS
+                                margin/padding.</p>
+                        </div>
+                    </div>
+
+                    <div class="tag-section">
+                        <h3><span class="tag">&lt;wbr&gt;</span> - Oportunidade de Quebra</h3>
+                        <p>Indica um ponto onde o navegador pode quebrar a linha se necessário.</p>
+                        <pre><code class="language-html">&lt;p&gt;Esteéumpalavramuitogrande&lt;wbr&gt;quepodeprecisardequebra.&lt;/p&gt;</code></pre>
+                    </div>
+                </section>
+
+                <section class="content-section animate-on-scroll">
+                    <h2>Exemplo Prático</h2>
+                    <p>Veja como esses elementos podem ser usados juntos:</p>
+
+                    <pre><code class="language-html">&lt;article&gt;
+    &lt;h1&gt;Novidades no &lt;abbr title="HyperText Markup Language 5"&gt;HTML5&lt;/abbr&gt;&lt;/h1&gt;
+    
+    &lt;p&gt;
+        O &lt;strong&gt;HTML5&lt;/strong&gt; introduziu vários novos elementos semânticos 
+        como &lt;code&gt;&amp;lt;header&amp;gt;&lt;/code&gt;, &lt;code&gt;&amp;lt;footer&amp;gt;&lt;/code&gt; e 
+        &lt;code&gt;&amp;lt;article&amp;gt;&lt;/code&gt; que &lt;em&gt;melhoram significativamente&lt;/em&gt; 
+        a estruturação de documentos web.
+    &lt;/p&gt;
+    
+    &lt;p&gt;
+        Publicado em: &lt;time datetime="2025-08-15"&gt;15 de agosto de 2025&lt;/time&gt;&lt;br&gt;
+        Última atualização: &lt;time datetime="2025-08-15T14:30"&gt;14:30&lt;/time&gt;
+    &lt;/p&gt;
+    
+    &lt;p&gt;
+        Para formatar código, use &lt;kbd&gt;Ctrl&lt;/kbd&gt; + &lt;kbd&gt;Alt&lt;/kbd&gt; + &lt;kbd&gt;F&lt;/kbd&gt;. 
+        O resultado será algo como:
+    &lt;/p&gt;
+    
+    &lt;pre&gt;&lt;code&gt;
+    function exemplo() {
+        console.log("Olá, mundo!");
+    }
+    &lt;/code&gt;&lt;/pre&gt;
+    
+    &lt;p&gt;
+        &lt;small&gt;Este artigo foi escrito por John Doe e está licenciado sob CC BY-SA.&lt;/small&gt;
+    &lt;/p&gt;
+&lt;/article&gt;</code></pre>
+                </section>
+            </div>
+
+            <footer class="article-footer">
+                <div class="navigation-links">
+                    <a href="agrupamento.html" class="nav-link prev-link">
+                        <i class="fas fa-arrow-left"></i>
+                        <span>Anterior: Agrupamento de Conteúdo</span>
+                    </a>
+                    <a href="midia.html" class="nav-link next-link">
+                        <span>Próximo: Imagens e Multimídia</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </footer>
+        </article>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-about">
+                <div class="footer-logo">
+                    <span class="logo-icon">HTML</span>
+                    <span>Guia HTML5</span>
+                </div>
+                <p>O guia mais completo de referência HTML5 na web. Todas as tags, exemplos práticos e boas práticas em
+                    um só lugar.</p>
+                <div class="social-links">
+                    <a href="https://github.com/NicolasS4" class="social-icon" aria-label="GitHub"><i
+                            class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/nicolas-almir-92773527a/" class="social-icon"
+                        aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-links">
+                <h3>Guia HTML</h3>
+                <ul>
+                    <li><a href="estrutura.html">Estrutura Básica</a></li>
+                    <li><a href="metadados.html">Metadados</a></li>
+                    <li><a href="conteudo.html">Seções de Conteúdo</a></li>
+                    <li><a href="texto.html">Textos e Semântica</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-links">
+                <h3>Recursos</h3>
+                <ul>
+                    <li><a href="midia.html">Imagens e Multimídia</a></li>
+                    <li><a href="tabelas.html">Tabelas</a></li>
+                    <li><a href="formularios.html">Formulários</a></li>
+                    <li><a href="interativo.html">Conteúdo Interativo</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-links">
+                <h3>Ferramentas</h3>
+                <ul>
+                    <li><a href="../ferramentas/extensoes.html">Extensões VS Code</a></li>
+                    <li><a href="../ferramentas/atalhos.html">Atalhos Úteis</a></li>
+                    <li><a href="https://nicolass4.github.io/portfolio-nicolas-almir/">Portfolio</a></li>
+                    <li><a href="https://nicolas.almir.br@gmail.com">Email</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="copyright">
+            <p>&copy; 2025 Guia Completo de HTML. Git Clone permitido.</p>
+        </div>
+    </footer>
+
+    <button id="dark-mode-toggle" class="theme-toggle" aria-label="Alternar modo escuro">
+        <i class="fas fa-moon"></i>
+    </button>
+
+    <a href="#" id="back-to-top" aria-label="Voltar ao topo">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <script src="../js/script.js"></script>
+    <script src="../js/animations.js"></script>
+</body>
+
+</html>

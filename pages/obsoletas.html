@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tags Obsoletas | Guia HTML5</title>
+    <meta name="description" content="Lista de tags HTML obsoletas no HTML5 e suas alternativas recomendadas">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/dark-mode.css" id="dark-mode" disabled>
+    <link rel="icon" href="https://img.icons8.com/color/48/000000/html-5.png">
+</head>
+
+<body>
+    <header>
+        <div class="header-container">
+            <a href="../index.html" class="logo">
+                <span class="logo-icon">HTML</span>
+                <span>Guia HTML5</span>
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="estrutura.html">Estrutura</a></li>
+                    <li><a href="metadados.html">Metadados</a></li>
+                    <li><a href="conteudo.html">Conteúdo</a></li>
+                    <li><a href="formularios.html">Formulários</a></li>
+                    <li><a href="../ferramentas/extensoes.html">Ferramentas</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <article class="content-article">
+            <header class="article-header">
+                <h1>Tags Obsoletas no HTML5</h1>
+                <p class="article-excerpt">Elementos HTML descontinuados e suas alternativas recomendadas.</p>
+                <div class="article-meta">
+                    <span class="reading-time"><i class="far fa-clock"></i> 20 min de leitura</span>
+                    <span class="last-updated"><i class="far fa-calendar-alt"></i> Atualizado em: 15/08/2025</span>
+                </div>
+            </header>
+
+            <div class="article-content">
+                <section class="content-section animate-on-scroll">
+                    <h2>Por que tags se tornam obsoletas?</h2>
+                    <p>O HTML5 removeu várias tags que eram usadas em versões anteriores do HTML, principalmente por:
+                    </p>
+
+                    <ul>
+                        <li><strong>Presentacionalismo:</strong> Tags que apenas definiam aparência, não significado
+                        </li>
+                        <li><strong>Má prática:</strong> Tags que incentivavam estruturas não semânticas</li>
+                        <li><strong>Tecnologias melhores:</strong> Tags substituídas por CSS ou novas alternativas
+                            semânticas</li>
+                        <li><strong>Problemas de acessibilidade:</strong> Tags que criavam barreiras para usuários com
+                            deficiência</li>
+                    </ul>
+                </section>
+
+                <section class="content-section animate-on-scroll">
+                    <h2>Lista de Tags Obsoletas</h2>
+
+                    <div class="obsolete-tags-table">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Tag Obsoleta</th>
+                                    <th>Descrição Original</th>
+                                    <th>Alternativa Recomendada</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><code>&lt;acronym&gt;</code></td>
+                                    <td>Definia um acrônimo</td>
+                                    <td><code>&lt;abbr&gt;</code> com atributo <code>title</code></td>
+                                </tr>
+                                <tr>
+                                    <td><code>&lt;applet&gt;</code></td>
+                                    <td>Incorporava applets Java</td>
+                                    <td><code>&lt;object&gt;</code> ou tecnologias modernas como JavaScript</td>
+                                </tr>
+                                <tr>
+                                    <td><code>&lt;basefont&gt;</code></td>
+                                    <td>Definia estilos de fonte base</td>
+                                    <td>CSS (<code>font-family</code>, <code>font-size</code>)</td>
+                                </tr>
+                                <tr>
+                                    <td><code>&lt;big&gt;</code></td>
+                                    <td>Aumentava o tamanho do texto</td>
+                                    <td>CSS (<code>font-size</code>)</td>
+                                </tr>
+                                <tr>
+                                    <td><code>&lt;center&gt;</code></td>
+                                    <td>Centralizava conteúdo</td>
+                                    <td>CSS (<code>text-align: center</code> ou <code>margin: auto</code>)</td>
+                                </tr>
+                                <tr>
+                                    <td><code>&lt;dir&gt;</code></td>
+                                    <td>Lista de diretórios</td>
+                                    <td><code>&lt;ul&gt;</code></td>
+                                </tr>
+                                <tr>
+                                    <td><code>&lt;font&gt;</code></td>
+                                    <td>Definia fonte, cor e tamanho</td>
+                                    <td>CSS (<code>font-family</code>, <code>color</code>, <code>font-size</code>)</td>
+                                </tr>
+                                <tr>
+                                    <td><code>&lt;frame&gt;</code>, <code>&lt;frameset&gt;</code>,
+                                        <code>&lt;noframes&gt;</code>
+                                    </td>
+                                    <td>Criava layouts com frames</td>
+                                    <td>CSS Layout (Flexbox, Grid) ou <code>&lt;iframe&gt;</code> para conteúdo externo
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><code>&lt;strike&gt;</code></td>
+                                    <td>Texto tachado</td>
+                                    <td><code>&lt;del&gt;</code> ou CSS (<code>text-decoration: line-through</code>)
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><code>&lt;tt&gt;</code></td>
+                                    <td>Texto em fonte teletype</td>
+                                    <td><code>&lt;code&gt;</code> ou CSS (<code>font-family: monospace</code>)</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+
+                <section class="content-section animate-on-scroll">
+                    <h2>Alternativas Detalhadas</h2>
+
+                    <div class="tag-section">
+                        <h3><span class="tag">&lt;font&gt;</span> → CSS</h3>
+                        <p>O elemento <code>&lt;font&gt;</code> era usado para controlar aparência do texto diretamente
+                            no HTML.</p>
+
+                        <div class="code-comparison">
+                            <div class="code-block obsolete">
+                                <h4>Obsoleto:</h4>
+                                <pre><code class="language-html">&lt;font face="Arial" size="4" color="red"&gt;
+    Texto estilizado
+&lt;/font&gt;</code></pre>
+                            </div>
+                            <div class="code-block recommended">
+                                <h4>Recomendado:</h4>
+                                <pre><code class="language-html">&lt;span class="texto-destaque"&gt;
+    Texto estilizado
+&lt;/span&gt;
+
+&lt;style&gt;
+    .texto-destaque {
+        font-family: Arial;
+        font-size: 1rem;
+        color: red;
+    }
+&lt;/style&gt;</code></pre>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tag-section">
+                        <h3><span class="tag">&lt;center&gt;</span> → CSS</h3>
+                        <p>O elemento <code>&lt;center&gt;</code> centralizava conteúdo horizontalmente.</p>
+
+                        <div class="code-comparison">
+                            <div class="code-block obsolete">
+                                <h4>Obsoleto:</h4>
+                                <pre><code class="language-html">&lt;center&gt;
+    Conteúdo centralizado
+&lt;/center&gt;</code></pre>
+                            </div>
+                            <div class="code-block recommended">
+                                <h4>Recomendado:</h4>
+                                <pre><code class="language-html">&lt;div class="centro"&gt;
+    Conteúdo centralizado
+&lt;/div&gt;
+
+&lt;style&gt;
+    .centro {
+        text-align: center; /* Para texto */
+        
+        /* Para blocos: */
+        margin-left: auto;
+        margin-right: auto;
+    }
+&lt;/style&gt;</code></pre>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tag-section">
+                        <h3><span class="tag">&lt;frameset&gt;</span> → Layouts Modernos</h3>
+                        <p>Framesets eram usados para dividir a janela em várias seções.</p>
+
+                        <div class="code-comparison">
+                            <div class="code-block obsolete">
+                                <h4>Obsoleto:</h4>
+                                <pre><code class="language-html">&lt;frameset cols="25%,75%"&gt;
+    &lt;frame src="menu.html"&gt;
+    &lt;frame src="conteudo.html"&gt;
+&lt;/frameset&gt;</code></pre>
+                            </div>
+                            <div class="code-block recommended">
+                                <h4>Recomendado:</h4>
+                                <pre><code class="language-html">&lt;div class="layout"&gt;
+    &lt;nav&gt;
+        &lt;!-- Conteúdo do menu --&gt;
+    &lt;/nav&gt;
+    &lt;main&gt;
+        &lt;!-- Conteúdo principal --&gt;
+    &lt;/main&gt;
+&lt;/div&gt;
+
+&lt;style&gt;
+    .layout {
+        display: grid;
+        grid-template-columns: 25% 75%;
+    }
+&lt;/style&gt;</code></pre>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="content-section animate-on-scroll">
+                    <h2>Migrando para HTML5</h2>
+
+                    <div class="migration-tips">
+                        <div class="tip-card">
+                            <i class="fas fa-check-circle"></i>
+                            <h3>Separe estrutura e apresentação</h3>
+                            <p>Use HTML para estrutura e significado, CSS para aparência.</p>
+                        </div>
+
+                        <div class="tip-card">
+                            <i class="fas fa-check-circle"></i>
+                            <h3>Prefira elementos semânticos</h3>
+                            <p>Use <code>&lt;header&gt;</code>, <code>&lt;nav&gt;</code>, <code>&lt;article&gt;</code>
+                                em vez de <code>&lt;div&gt;</code> genéricos.</p>
+                        </div>
+
+                        <div class="tip-card">
+                            <i class="fas fa-check-circle"></i>
+                            <h3>Valide seu código</h3>
+                            <p>Use o <a href="https://validator.w3.org/" target="_blank">Validador W3C</a> para
+                                identificar tags obsoletas.</p>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <footer class="article-footer">
+                <div class="navigation-links">
+                    <a href="interativo.html" class="nav-link prev-link">
+                        <i class="fas fa-arrow-left"></i>
+                        <span>Anterior: Conteúdo Interativo</span>
+                    </a>
+                    <a href="../ferramentas/extensoes.html" class="nav-link next-link">
+                        <span>Próximo: Ferramentas</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </footer>
+        </article>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-about">
+                <div class="footer-logo">
+                    <span class="logo-icon">HTML</span>
+                    <span>Guia HTML5</span>
+                </div>
+                <p>O guia mais completo de referência HTML5 na web. Todas as tags, exemplos práticos e boas práticas em
+                    um só lugar.</p>
+                <div class="social-links">
+                    <a href="https://github.com/NicolasS4" class="social-icon" aria-label="GitHub"><i
+                            class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/nicolas-almir-92773527a/" class="social-icon"
+                        aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-links">
+                <h3>Guia HTML</h3>
+                <ul>
+                    <li><a href="estrutura.html">Estrutura Básica</a></li>
+                    <li><a href="metadados.html">Metadados</a></li>
+                    <li><a href="conteudo.html">Seções de Conteúdo</a></li>
+                    <li><a href="texto.html">Textos e Semântica</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-links">
+                <h3>Recursos</h3>
+                <ul>
+                    <li><a href="midia.html">Imagens e Multimídia</a></li>
+                    <li><a href="tabelas.html">Tabelas</a></li>
+                    <li><a href="formularios.html">Formulários</a></li>
+                    <li><a href="interativo.html">Conteúdo Interativo</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-links">
+                <h3>Ferramentas</h3>
+                <ul>
+                    <li><a href="../ferramentas/extensoes.html">Extensões VS Code</a></li>
+                    <li><a href="../ferramentas/atalhos.html">Atalhos Úteis</a></li>
+                    <li><a href="https://nicolass4.github.io/portfolio-nicolas-almir/">Portfolio</a></li>
+                    <li><a href="https://nicolas.almir.br@gmail.com">Email</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="copyright">
+            <p>&copy; 2025 Guia Completo de HTML. Git Clone permitido.</p>
+        </div>
+    </footer>
+
+    <button id="dark-mode-toggle" class="theme-toggle" aria-label="Alternar modo escuro">
+        <i class="fas fa-moon"></i>
+    </button>
+
+    <a href="#" id="back-to-top" aria-label="Voltar ao topo">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <script src="../js/script.js"></script>
+    <script src="../js/animations.js"></script>
+</body>
+
+</html>

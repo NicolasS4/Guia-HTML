@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imagens e Multimídia | Guia HTML5</title>
+    <meta name="description"
+        content="Aprenda sobre os elementos HTML para incorporação de imagens, áudio, vídeo e outros conteúdos multimídia">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/dark-mode.css" id="dark-mode" disabled>
+    <link rel="icon" href="https://img.icons8.com/color/48/000000/html-5.png">
+</head>
+
+<body>
+    <header>
+        <div class="header-container">
+            <a href="../index.html" class="logo">
+                <span class="logo-icon">HTML</span>
+                <span>Guia HTML5</span>
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="estrutura.html">Estrutura</a></li>
+                    <li><a href="metadados.html">Metadados</a></li>
+                    <li><a href="conteudo.html">Conteúdo</a></li>
+                    <li><a href="formularios.html">Formulários</a></li>
+                    <li><a href="../ferramentas/extensoes.html">Ferramentas</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <article class="content-article">
+            <header class="article-header">
+                <h1>Imagens e Multimídia</h1>
+                <p class="article-excerpt">Elementos HTML para incorporação de imagens, áudio, vídeo e outros conteúdos
+                    multimídia.</p>
+                <div class="article-meta">
+                    <span class="reading-time"><i class="far fa-clock"></i> 15 min de leitura</span>
+                    <span class="last-updated"><i class="far fa-calendar-alt"></i> Atualizado em: 15/08/2025</span>
+                </div>
+            </header>
+
+            <div class="article-content">
+                <section class="content-section animate-on-scroll">
+                    <h2>Elementos de Imagem</h2>
+
+                    <div class="tag-section">
+                        <h3><span class="tag">&lt;img&gt;</span> - Imagem</h3>
+                        <p>Incorporar uma imagem no documento.</p>
+                        <pre><code class="language-html">&lt;img src="imagem.jpg" alt="Descrição da imagem" width="800" height="600" loading="lazy"&gt;</code></pre>
+                        <div class="tag-attributes">
+                            <h4>Atributos Essenciais:</h4>
+                            <ul>
+                                <li><code>src</code> - Caminho para a imagem</li>
+                                <li><code>alt</code> - Texto alternativo (obrigatório para acessibilidade)</li>
+                                <li><code>width</code>/<code>height</code> - Dimensões (ajuda no layout)</li>
+                                <li><code>loading</code> - "lazy" para carregamento tardio</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="tag-section">
+                        <h3><span class="tag">&lt;picture&gt;</span> - Imagem Responsiva</h3>
+                        <p>Fornece versões alternativas de uma imagem para diferentes condições de exibição.</p>
+                        <pre><code class="language-html">&lt;picture&gt;
+    &lt;source media="(min-width: 1200px)" srcset="imagem-grande.jpg"&gt;
+    &lt;source media="(min-width: 800px)" srcset="imagem-media.jpg"&gt;
+    &lt;img src="imagem-pequena.jpg" alt="Descrição"&gt;
+&lt;/picture&gt;</code></pre>
+                        <div class="best-practice">
+                            <i class="fas fa-check-circle"></i>
+                            <p>Use para art direction (imagens diferentes em diferentes tamanhos) ou formatos
+                                alternativos (WebP, AVIF).</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="content-section animate-on-scroll">
+                    <h2>Elementos de Áudio e Vídeo</h2>
+
+                    <div class="tag-section">
+                        <h3><span class="tag">&lt;audio&gt;</span> - Áudio</h3>
+                        <p>Incorporar conteúdo de áudio no documento.</p>
+                        <pre><code class="language-html">&lt;audio controls&gt;
+    &lt;source src="audio.mp3" type="audio/mpeg"&gt;
+    &lt;source src="audio.ogg" type="audio/ogg"&gt;
+    Seu navegador não suporta o elemento de áudio.
+&lt;/audio&gt;</code></pre>
+                        <div class="tag-attributes">
+                            <h4>Atributos:</h4>
+                            <ul>
+                                <li><code>controls</code> - Mostra controles de reprodução</li>
+                                <li><code>autoplay</code> - Inicia automaticamente (evitar)</li>
+                                <li><code>loop</code> - Reproduz em loop</li>
+                                <li><code>muted</code> - Inicia mudo</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="tag-section">
+                        <h3><span class="tag">&lt;video&gt;</span> - Vídeo</h3>
+                        <p>Incorporar conteúdo de vídeo no documento.</p>
+                        <pre><code class="language-html">&lt;video width="640" height="360" controls poster="thumbnail.jpg"&gt;
+    &lt;source src="video.mp4" type="video/mp4"&gt;
+    &lt;source src="video.webm" type="video/webm"&gt;
+    Seu navegador não suporta o elemento de vídeo.
+&lt;/video&gt;</code></pre>
+                        <div class="tag-attributes">
+                            <h4>Atributos Adicionais:</h4>
+                            <ul>
+                                <li><code>poster</code> - Imagem de pré-visualização</li>
+                                <li><code>preload</code> - Como pré-carregar o vídeo</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="content-section animate-on-scroll">
+                    <h2>Elementos de Suporte</h2>
+
+                    <div class="tag-section">
+                        <h3><span class="tag">&lt;source&gt;</span> - Fonte Alternativa</h3>
+                        <p>Especifica múltiplos recursos de mídia para elementos <code>&lt;picture&gt;</code>,
+                            <code>&lt;audio&gt;</code> e <code>&lt;video&gt;</code>.
+                        </p>
+                        <pre><code class="language-html">&lt;!-- Para picture --&gt;
+&lt;source srcset="imagem.webp" type="image/webp"&gt;
+
+&lt;!-- Para audio/video --&gt;
+&lt;source src="midia.ogg" type="audio/ogg; codecs=opus"&gt;</code></pre>
+                    </div>
+
+                    <div class="tag-section">
+                        <h3><span class="tag">&lt;track&gt;</span> - Legenda</h3>
+                        <p>Adiciona trilhas de texto (legendas, descrições) para elementos <code>&lt;audio&gt;</code> e
+                            <code>&lt;video&gt;</code>.
+                        </p>
+                        <pre><code class="language-html">&lt;track 
+    src="legendas.vtt" 
+    kind="subtitles" 
+    srclang="pt" 
+    label="Português" 
+    default
+&gt;</code></pre>
+                        <div class="tag-attributes">
+                            <h4>Atributos:</h4>
+                            <ul>
+                                <li><code>kind</code> - Tipo de trilha (subtitles, captions, descriptions, etc.)</li>
+                                <li><code>srclang</code> - Idioma da trilha</li>
+                                <li><code>label</code> - Título para o usuário</li>
+                                <li><code>default</code> - Usar esta trilha por padrão</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="content-section animate-on-scroll">
+                    <h2>Outros Elementos Multimídia</h2>
+
+                    <div class="tag-section">
+                        <h3><span class="tag">&lt;embed&gt;</span> - Conteúdo Externo</h3>
+                        <p>Incorporar conteúdo externo ou plug-in (como Flash, PDF viewers).</p>
+                        <pre><code class="language-html">&lt;embed 
+    type="video/webm" 
+    src="video.webm" 
+    width="400" 
+    height="300"
+&gt;</code></pre>
+                        <div class="warning-box">
+                            <i class="fas fa-exclamation-triangle"></i>
+                            <p>Evite usar quando possível. Prefira elementos nativos como <code>&lt;video&gt;</code> ou
+                                <code>&lt;iframe&gt;</code>.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="tag-section">
+                        <h3><span class="tag">&lt;object&gt;</span> e <span class="tag">&lt;param&gt;</span></h3>
+                        <p>Incorporar objetos externos com parâmetros configuráveis.</p>
+                        <pre><code class="language-html">&lt;object data="flash.swf" type="application/x-shockwave-flash"&gt;
+    &lt;param name="quality" value="high"&gt;
+    Conteúdo alternativo para navegadores sem suporte.
+&lt;/object&gt;</code></pre>
+                    </div>
+
+                    <div class="tag-section">
+                        <h3><span class="tag">&lt;svg&gt;</span> - Gráficos Vetoriais</h3>
+                        <p>Container para gráficos vetoriais escaláveis (SVG).</p>
+                        <pre><code class="language-html">&lt;svg width="100" height="100"&gt;
+    &lt;circle cx="50" cy="50" r="40" fill="red" /&gt;
+&lt;/svg&gt;</code></pre>
+                    </div>
+
+                    <div class="tag-section">
+                        <h3><span class="tag">&lt;canvas&gt;</span> - Área de Desenho</h3>
+                        <p>Área para renderização de gráficos via JavaScript.</p>
+                        <pre><code class="language-html">&lt;canvas id="meuCanvas" width="200" height="100"&gt;
+    Seu navegador não suporta canvas.
+&lt;/canvas&gt;
+&lt;script&gt;
+    const canvas = document.getElementById('meuCanvas');
+    const ctx = canvas.getContext('2d');
+    ctx.fillStyle = 'red';
+    ctx.fillRect(10, 10, 50, 50);
+&lt;/script&gt;</code></pre>
+                    </div>
+                </section>
+
+                <section class="content-section animate-on-scroll">
+                    <h2>Boas Práticas para Multimídia</h2>
+
+                    <div class="best-practices">
+                        <div class="practice-card">
+                            <i class="fas fa-check-circle"></i>
+                            <h3>Textos Alternativos</h3>
+                            <p>Sempre forneça <code>alt</code> descritivo para imagens e transcrições para áudio/vídeo.
+                            </p>
+                        </div>
+
+                        <div class="practice-card">
+                            <i class="fas fa-check-circle"></i>
+                            <h3>Formatos Modernos</h3>
+                            <p>Prefira formatos como WebP para imagens e WebM para vídeos quando possível.</p>
+                        </div>
+
+                        <div class="practice-card">
+                            <i class="fas fa-check-circle"></i>
+                            <h3>Responsividade</h3>
+                            <p>Use <code>&lt;picture&gt;</code> e <code>srcset</code> para imagens responsivas.</p>
+                        </div>
+
+                        <div class="practice-card">
+                            <i class="fas fa-check-circle"></i>
+                            <h3>Performance</h3>
+                            <p>Use <code>loading="lazy"</code> para imagens abaixo do dobra e compressão adequada.</p>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <footer class="article-footer">
+                <div class="navigation-links">
+                    <a href="texto.html" class="nav-link prev-link">
+                        <i class="fas fa-arrow-left"></i>
+                        <span>Anterior: Textos e Semântica</span>
+                    </a>
+                    <a href="tabelas.html" class="nav-link next-link">
+                        <span>Próximo: Tabelas</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </footer>
+        </article>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-about">
+                <div class="footer-logo">
+                    <span class="logo-icon">HTML</span>
+                    <span>Guia HTML5</span>
+                </div>
+                <p>O guia mais completo de referência HTML5 na web. Todas as tags, exemplos práticos e boas práticas em
+                    um só lugar.</p>
+                <div class="social-links">
+                    <a href="https://github.com/NicolasS4" class="social-icon" aria-label="GitHub"><i
+                            class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/nicolas-almir-92773527a/" class="social-icon"
+                        aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-links">
+                <h3>Guia HTML</h3>
+                <ul>
+                    <li><a href="estrutura.html">Estrutura Básica</a></li>
+                    <li><a href="metadados.html">Metadados</a></li>
+                    <li><a href="conteudo.html">Seções de Conteúdo</a></li>
+                    <li><a href="texto.html">Textos e Semântica</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-links">
+                <h3>Recursos</h3>
+                <ul>
+                    <li><a href="midia.html">Imagens e Multimídia</a></li>
+                    <li><a href="tabelas.html">Tabelas</a></li>
+                    <li><a href="formularios.html">Formulários</a></li>
+                    <li><a href="interativo.html">Conteúdo Interativo</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-links">
+                <h3>Ferramentas</h3>
+                <ul>
+                    <li><a href="../ferramentas/extensoes.html">Extensões VS Code</a></li>
+                    <li><a href="../ferramentas/atalhos.html">Atalhos Úteis</a></li>
+                    <li><a href="https://nicolass4.github.io/portfolio-nicolas-almir/">Portfolio</a></li>
+                    <li><a href="https://nicolas.almir.br@gmail.com">Email</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="copyright">
+            <p>&copy; 2025 Guia Completo de HTML. Git Clone permitido.</p>
+        </div>
+    </footer>
+
+    <button id="dark-mode-toggle" class="theme-toggle" aria-label="Alternar modo escuro">
+        <i class="fas fa-moon"></i>
+    </button>
+
+    <a href="#" id="back-to-top" aria-label="Voltar ao topo">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <script src="../js/script.js"></script>
+    <script src="../js/animations.js"></script>
+</body>
+
+</html>

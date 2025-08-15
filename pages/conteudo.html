@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seções de Conteúdo | Guia HTML5</title>
+    <meta name="description" content="Aprenda sobre os elementos semânticos de seção de conteúdo em HTML5">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/dark-mode.css" id="dark-mode" disabled>
+    <link rel="icon" href="https://img.icons8.com/color/48/000000/html-5.png">
+</head>
+
+<body>
+    <header>
+        <div class="header-container">
+            <a href="../index.html" class="logo">
+                <span class="logo-icon">HTML</span>
+                <span>Guia HTML5</span>
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="estrutura.html">Estrutura</a></li>
+                    <li><a href="metadados.html">Metadados</a></li>
+                    <li><a href="conteudo.html">Conteúdo</a></li>
+                    <li><a href="formularios.html">Formulários</a></li>
+                    <li><a href="../ferramentas/extensoes.html">Ferramentas</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <article class="content-article">
+            <header class="article-header">
+                <h1>Seções de Conteúdo</h1>
+                <p class="article-excerpt">Elementos semânticos do HTML5 para organização e estruturação do conteúdo da
+                    página.</p>
+                <div class="article-meta">
+                    <span class="reading-time"><i class="far fa-clock"></i> 30 min de leitura</span>
+                    <span class="last-updated"><i class="far fa-calendar-alt"></i> Atualizado em: 15/08/2025</span>
+                </div>
+            </header>
+
+            <div class="article-content">
+                <section class="content-section animate-on-scroll">
+                    <h2>Introdução à Semântica HTML5</h2>
+                    <p>O HTML5 introduziu novos elementos semânticos que ajudam a definir a estrutura e o significado do
+                        conteúdo, melhorando a acessibilidade e o SEO.</p>
+
+                    <div class="info-box">
+                        <i class="fas fa-info-circle"></i>
+                        <p>Elementos semânticos descrevem claramente seu significado tanto para o navegador quanto para
+                            o desenvolvedor.</p>
+                    </div>
+                </section>
+
+                <section class="content-section animate-on-scroll">
+                    <h2>Elementos de Seção</h2>
+
+                    <div class="tag-section">
+                        <h3><span class="tag">&lt;header&gt;</span> - Cabeçalho</h3>
+                        <p>Representa um grupo de conteúdo introdutório ou de navegação. Pode ser usado no início da
+                            página ou de seções.</p>
+                        <pre><code class="language-html">&lt;header&gt;
+    &lt;h1&gt;Título do Site&lt;/h1&gt;
+    &lt;nav&gt;
+        &lt;ul&gt;
+            &lt;li&gt;&lt;a href="#"&gt;Home&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#"&gt;Sobre&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/nav&gt;
+&lt;/header&gt;</code></pre>
+                    </div>
+
+                    <div class="tag-section">
+                        <h3><span class="tag">&lt;footer&gt;</span> - Rodapé</h3>
+                        <p>Representa o rodapé de uma seção ou página, geralmente contendo informações sobre autoria,
+                            links relacionados e direitos autorais.</p>
+                        <pre><code class="language-html">&lt;footer&gt;
+    &lt;p&gt;&copy; 2025 Meu Site. Todos os direitos reservados.&lt;/p&gt;
+    &lt;address&gt;contato@meusite.com&lt;/address&gt;
+&lt;/footer&gt;</code></pre>
+                    </div>
+
+                    <div class="tag-section">
+                        <h3><span class="tag">&lt;main&gt;</span> - Conteúdo Principal</h3>
+                        <p>Representa o conteúdo principal único do documento. Deve haver apenas um
+                            <code>&lt;main&gt;</code> por página.
+                        </p>
+                        <pre><code class="language-html">&lt;main&gt;
+    &lt;h1&gt;Título do Artigo&lt;/h1&gt;
+    &lt;p&gt;Conteúdo principal da página...&lt;/p&gt;
+&lt;/main&gt;</code></pre>
+                        <div class="warning-box">
+                            <i class="fas fa-exclamation-triangle"></i>
+                            <p>Não inclua conteúdo que se repete em várias páginas (como navegação ou rodapé) dentro do
+                                <code>&lt;main&gt;</code>.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="tag-section">
+                        <h3><span class="tag">&lt;section&gt;</span> - Seção Temática</h3>
+                        <p>Define uma seção temática no documento, como capítulos, cabeçalhos ou áreas com o mesmo tema.
+                        </p>
+                        <pre><code class="language-html">&lt;section&gt;
+    &lt;h2&gt;Sobre Nós&lt;/h2&gt;
+    &lt;p&gt;Conteúdo sobre a empresa...&lt;/p&gt;
+&lt;/section&gt;</code></pre>
+                        <div class="best-practice">
+                            <i class="fas fa-check-circle"></i>
+                            <p>Use <code>&lt;section&gt;</code> quando o conteúdo faz sentido por si só e merece um
+                                cabeçalho próprio.</p>
+                        </div>
+                    </div>
+
+                    <div class="tag-section">
+                        <h3><span class="tag">&lt;article&gt;</span> - Conteúdo Independente</h3>
+                        <p>Representa um conteúdo independente e autocontido, como postagens de blog, notícias ou
+                            artigos.</p>
+                        <pre><code class="language-html">&lt;article&gt;
+    &lt;h2&gt;Título do Artigo&lt;/h2&gt;
+    &lt;p&gt;Conteúdo do artigo...&lt;/p&gt;
+&lt;/article&gt;</code></pre>
+                        <div class="tag-attributes">
+                            <h4>Quando usar:</h4>
+                            <ul>
+                                <li>Postagens de blog ou fórum</li>
+                                <li>Notícias ou artigos</li>
+                                <li>Comentários de usuários</li>
+                                <li>Widgets ou gadgets interativos</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="tag-section">
+                        <h3><span class="tag">&lt;aside&gt;</span> - Conteúdo Relacionado</h3>
+                        <p>Representa conteúdo relacionado indiretamente ao conteúdo principal, como barras laterais,
+                            blocos de citação ou anúncios.</p>
+                        <pre><code class="language-html">&lt;aside&gt;
+    &lt;h3&gt;Leia também&lt;/h3&gt;
+    &lt;ul&gt;
+        &lt;li&gt;&lt;a href="#"&gt;Post relacionado 1&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#"&gt;Post relacionado 2&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/aside&gt;</code></pre>
+                    </div>
+
+                    <div class="tag-section">
+                        <h3><span class="tag">&lt;nav&gt;</span> - Navegação</h3>
+                        <p>Define uma seção de navegação com links para outras páginas ou partes da página atual.</p>
+                        <pre><code class="language-html">&lt;nav&gt;
+    &lt;ul&gt;
+        &lt;li&gt;&lt;a href="#"&gt;Home&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#"&gt;Sobre&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#"&gt;Contato&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/nav&gt;</code></pre>
+                        <div class="best-practice">
+                            <i class="fas fa-check-circle"></i>
+                            <p>Nem todos os grupos de links precisam estar em um <code>&lt;nav&gt;</code>. Use apenas
+                                para blocos principais de navegação.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="content-section animate-on-scroll">
+                    <h2>Elementos de Cabeçalho</h2>
+
+                    <div class="tag-section">
+                        <h3><span class="tag">&lt;h1&gt;</span> a <span class="tag">&lt;h6&gt;</span> - Títulos</h3>
+                        <p>Representam seis níveis de cabeçalhos, sendo <code>&lt;h1&gt;</code> o mais importante e
+                            <code>&lt;h6&gt;</code> o menos importante.
+                        </p>
+                        <pre><code class="language-html">&lt;h1&gt;Título Principal&lt;/h1&gt;
+&lt;h2&gt;Subtítulo&lt;/h2&gt;
+&lt;h3&gt;Seção&lt;/h3&gt;
+&lt;h4&gt;Subseção&lt;/h4&gt;
+&lt;h5&gt;Item&lt;/h5&gt;
+&lt;h6&gt;Subitem&lt;/h6&gt;</code></pre>
+                        <div class="best-practice">
+                            <i class="fas fa-check-circle"></i>
+                            <p>Mantenha uma hierarquia lógica de cabeçalhos. Nunca pule níveis (ex: não coloque um
+                                <code>&lt;h3&gt;</code> diretamente após um <code>&lt;h1&gt;</code>).
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="tag-section">
+                        <h3><span class="tag">&lt;address&gt;</span> - Informações de Contato</h3>
+                        <p>Fornece informações de contato para o autor/proprietário do documento ou artigo.</p>
+                        <pre><code class="language-html">&lt;address&gt;
+    Escrito por &lt;a href="mailto:autor@exemplo.com"&gt;Nome do Autor&lt;/a&gt;.&lt;br&gt;
+    Visite-nos em:&lt;br&gt;
+    Exemplo.com&lt;br&gt;
+    Caixa Postal 123, Cidade&lt;br&gt;
+    País
+&lt;/address&gt;</code></pre>
+                    </div>
+                </section>
+
+                <section class="content-section animate-on-scroll">
+                    <h2>Exemplo de Estrutura Completa</h2>
+                    <p>Veja como esses elementos podem ser combinados em uma página típica:</p>
+
+                    <pre><code class="language-html">&lt;body&gt;
+    &lt;header&gt;
+        &lt;h1&gt;Meu Blog&lt;/h1&gt;
+        &lt;nav&gt;
+            &lt;ul&gt;
+                &lt;li&gt;&lt;a href="#"&gt;Home&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#"&gt;Artigos&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/nav&gt;
+    &lt;/header&gt;
+
+    &lt;main&gt;
+        &lt;article&gt;
+            &lt;header&gt;
+                &lt;h2&gt;Título do Artigo&lt;/h2&gt;
+                &lt;p&gt;Publicado em: &lt;time datetime="2025-08-15"&gt;15/08/2025&lt;/time&gt;&lt;/p&gt;
+            &lt;/header&gt;
+            
+            &lt;section&gt;
+                &lt;h3&gt;Introdução&lt;/h3&gt;
+                &lt;p&gt;Conteúdo da introdução...&lt;/p&gt;
+            &lt;/section&gt;
+            
+            &lt;section&gt;
+                &lt;h3&gt;Desenvolvimento&lt;/h3&gt;
+                &lt;p&gt;Conteúdo principal...&lt;/p&gt;
+            &lt;/section&gt;
+            
+            &lt;footer&gt;
+                &lt;p&gt;Tags: HTML, Semântica&lt;/p&gt;
+            &lt;/footer&gt;
+        &lt;/article&gt;
+
+        &lt;aside&gt;
+            &lt;h3&gt;Artigos Relacionados&lt;/h3&gt;
+            &lt;ul&gt;
+                &lt;li&gt;&lt;a href="#"&gt;Artigo 1&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#"&gt;Artigo 2&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/aside&gt;
+    &lt;/main&gt;
+
+    &lt;footer&gt;
+        &lt;p&gt;&copy; 2025 Meu Blog&lt;/p&gt;
+        &lt;address&gt;
+            &lt;a href="mailto:contato@meublog.com"&gt;contato@meublog.com&lt;/a&gt;
+        &lt;/address&gt;
+    &lt;/footer&gt;
+&lt;/body&gt;</code></pre>
+                </section>
+            </div>
+
+            <footer class="article-footer">
+                <div class="navigation-links">
+                    <a href="metadados.html" class="nav-link prev-link">
+                        <i class="fas fa-arrow-left"></i>
+                        <span>Anterior: Metadados</span>
+                    </a>
+                    <a href="agrupamento.html" class="nav-link next-link">
+                        <span>Próximo: Agrupamento de Conteúdo</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </footer>
+        </article>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-about">
+                <div class="footer-logo">
+                    <span class="logo-icon">HTML</span>
+                    <span>Guia HTML5</span>
+                </div>
+                <p>O guia mais completo de referência HTML5 na web. Todas as tags, exemplos práticos e boas práticas em
+                    um só lugar.</p>
+                <div class="social-links">
+                    <a href="https://github.com/NicolasS4" class="social-icon" aria-label="GitHub"><i
+                            class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/nicolas-almir-92773527a/" class="social-icon"
+                        aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-links">
+                <h3>Guia HTML</h3>
+                <ul>
+                    <li><a href="estrutura.html">Estrutura Básica</a></li>
+                    <li><a href="metadados.html">Metadados</a></li>
+                    <li><a href="conteudo.html">Seções de Conteúdo</a></li>
+                    <li><a href="texto.html">Textos e Semântica</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-links">
+                <h3>Recursos</h3>
+                <ul>
+                    <li><a href="midia.html">Imagens e Multimídia</a></li>
+                    <li><a href="tabelas.html">Tabelas</a></li>
+                    <li><a href="formularios.html">Formulários</a></li>
+                    <li><a href="interativo.html">Conteúdo Interativo</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-links">
+                <h3>Ferramentas</h3>
+                <ul>
+                    <li><a href="../ferramentas/extensoes.html">Extensões VS Code</a></li>
+                    <li><a href="../ferramentas/atalhos.html">Atalhos Úteis</a></li>
+                    <li><a href="https://nicolass4.github.io/portfolio-nicolas-almir/">Portfolio</a></li>
+                    <li><a href="https://nicolas.almir.br@gmail.com">Email</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="copyright">
+            <p>&copy; 2025 Guia Completo de HTML. Git Clone permitido.</p>
+        </div>
+    </footer>
+
+    <button id="dark-mode-toggle" class="theme-toggle" aria-label="Alternar modo escuro">
+        <i class="fas fa-moon"></i>
+    </button>
+
+    <a href="#" id="back-to-top" aria-label="Voltar ao topo">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <script src="../js/script.js"></script>
+    <script src="../js/animations.js"></script>
+</body>
+
+</html>

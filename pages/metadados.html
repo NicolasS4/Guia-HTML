@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Metadados HTML | Guia HTML5</title>
+    <meta name="description"
+        content="Aprenda sobre os elementos de metadados em HTML5 que fornecem informações sobre o documento">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/dark-mode.css" id="dark-mode" disabled>
+    <link rel="icon" href="https://img.icons8.com/color/48/000000/html-5.png">
+</head>
+
+<body>
+    <header>
+        <div class="header-container">
+            <a href="../index.html" class="logo">
+                <span class="logo-icon">HTML</span>
+                <span>Guia HTML5</span>
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="estrutura.html">Estrutura</a></li>
+                    <li><a href="metadados.html">Metadados</a></li>
+                    <li><a href="conteudo.html">Conteúdo</a></li>
+                    <li><a href="formularios.html">Formulários</a></li>
+                    <li><a href="../ferramentas/extensoes.html">Ferramentas</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <article class="content-article">
+            <header class="article-header">
+                <h1>Metadados HTML</h1>
+                <p class="article-excerpt">Elementos que fornecem informações sobre o documento HTML, não exibidos
+                    diretamente na página.</p>
+                <div class="article-meta">
+                    <span class="reading-time"><i class="far fa-clock"></i> 18 min de leitura</span>
+                    <span class="last-updated"><i class="far fa-calendar-alt"></i> Atualizado em: 15/08/2025</span>
+                </div>
+            </header>
+
+            <div class="article-content">
+                <section class="content-section animate-on-scroll">
+                    <h2>O que são Metadados?</h2>
+                    <p>Metadados são informações sobre o documento HTML que não são exibidas diretamente na página, mas
+                        são essenciais para navegadores, mecanismos de busca e outras aplicações que processam o
+                        documento.</p>
+
+                    <div class="info-box">
+                        <i class="fas fa-info-circle"></i>
+                        <p>Os metadados são colocados dentro do elemento <code>&lt;head&gt;</code> do documento HTML e
+                            incluem título, descrição, autor, palavras-chave e outras informações úteis.</p>
+                    </div>
+                </section>
+
+                <section class="content-section animate-on-scroll">
+                    <h2>Elementos de Metadados</h2>
+
+                    <div class="tag-section">
+                        <h3><span class="tag">&lt;meta&gt;</span> - Metainformações</h3>
+                        <p>O elemento <code>&lt;meta&gt;</code> fornece metadados sobre o documento HTML, como charset,
+                            viewport, descrição e palavras-chave.</p>
+                        <pre><code class="language-html">&lt;meta charset="UTF-8"&gt;
+&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+&lt;meta name="description" content="Um guia completo sobre HTML5"&gt;
+&lt;meta name="keywords" content="HTML, HTML5, guia, tutorial"&gt;
+&lt;meta name="author" content="Seu Nome"&gt;</code></pre>
+                        <div class="tag-attributes">
+                            <h4>Atributos Comuns:</h4>
+                            <ul>
+                                <li><code>charset</code> - Define a codificação de caracteres (UTF-8 é recomendado)</li>
+                                <li><code>name</code> - Especifica o tipo de metadado</li>
+                                <li><code>content</code> - Fornece o valor associado ao metadado</li>
+                                <li><code>http-equiv</code> - Usado para cabeçalhos HTTP simulados</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="tag-section">
+                        <h3><span class="tag">&lt;title&gt;</span> - Título do Documento</h3>
+                        <p>Define o título do documento, exibido na aba do navegador e nos resultados de busca.</p>
+                        <pre><code class="language-html">&lt;title&gt;Meu Site Incrível&lt;/title&gt;</code></pre>
+                        <div class="tag-attributes">
+                            <h4>Boas Práticas:</h4>
+                            <ul>
+                                <li>Mantenha títulos curtos e descritivos (50-60 caracteres)</li>
+                                <li>Inclua palavras-chave relevantes no início</li>
+                                <li>Evite títulos genéricos como "Home" ou "Página 1"</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="tag-section">
+                        <h3><span class="tag">&lt;link&gt;</span> - Ligações a Recursos Externos</h3>
+                        <p>Usado para vincular folhas de estilo, ícones e outros recursos externos.</p>
+                        <pre><code class="language-html">&lt;link rel="stylesheet" href="estilos.css"&gt;
+&lt;link rel="icon" href="favicon.ico" type="image/x-icon"&gt;
+&lt;link rel="preconnect" href="https://fonts.googleapis.com"&gt;</code></pre>
+                        <div class="tag-attributes">
+                            <h4>Atributos Importantes:</h4>
+                            <ul>
+                                <li><code>rel</code> - Define o relacionamento com o documento</li>
+                                <li><code>href</code> - Especifica a URL do recurso</li>
+                                <li><code>type</code> - Indica o tipo MIME do recurso</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="tag-section">
+                        <h3><span class="tag">&lt;style&gt;</span> - CSS Interno</h3>
+                        <p>Permite incluir folhas de estilo CSS diretamente no documento HTML.</p>
+                        <pre><code class="language-html">&lt;style&gt;
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 20px;
+    }
+&lt;/style&gt;</code></pre>
+                        <div class="best-practice">
+                            <i class="fas fa-check-circle"></i>
+                            <p>Para melhor desempenho e manutenibilidade, prefira usar arquivos CSS externos com
+                                <code>&lt;link&gt;</code> para estilos mais complexos.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="tag-section">
+                        <h3><span class="tag">&lt;script&gt;</span> - Código JavaScript</h3>
+                        <p>Usado para incluir código JavaScript, seja interno ou externo.</p>
+                        <pre><code class="language-html">&lt;script src="script.js"&gt;&lt;/script&gt;
+&lt;script&gt;
+    console.log('Olá, mundo!');
+&lt;/script&gt;</code></pre>
+                        <div class="tag-attributes">
+                            <h4>Recomendações:</h4>
+                            <ul>
+                                <li>Use o atributo <code>defer</code> ou <code>async</code> para scripts externos quando
+                                    apropriado</li>
+                                <li>Coloque scripts no final do <code>&lt;body&gt;</code> para melhor desempenho</li>
+                                <li>Para módulos JavaScript, use <code>type="module"</code></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="tag-section">
+                        <h3><span class="tag">&lt;noscript&gt;</span> - Conteúdo Alternativo</h3>
+                        <p>Define conteúdo a ser exibido quando scripts estão desativados.</p>
+                        <pre><code class="language-html">&lt;noscript&gt;
+    &lt;p&gt;Seu navegador não suporta JavaScript ou está desativado.&lt;/p&gt;
+&lt;/noscript&gt;</code></pre>
+                    </div>
+
+                    <div class="tag-section">
+                        <h3><span class="tag">&lt;base&gt;</span> - URL Base</h3>
+                        <p>Especifica a URL base para todos os links relativos no documento.</p>
+                        <pre><code class="language-html">&lt;base href="https://www.exemplo.com/" target="_blank"&gt;</code></pre>
+                        <div class="warning-box">
+                            <i class="fas fa-exclamation-triangle"></i>
+                            <p>Use com cautela, pois afeta todos os links relativos na página. Pode causar problemas se
+                                não configurado corretamente.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="content-section animate-on-scroll">
+                    <h2>Metadados para SEO</h2>
+
+                    <div class="seo-metadata">
+                        <h3>Meta Tags Essenciais para Otimização de Busca</h3>
+                        <pre><code class="language-html">&lt;meta name="description" content="Descrição clara e concisa do conteúdo da página"&gt;
+&lt;meta name="keywords" content="palavra-chave1, palavra-chave2, palavra-chave3"&gt;
+&lt;meta name="author" content="Nome do Autor"&gt;
+&lt;meta name="robots" content="index, follow"&gt;
+
+&lt;!-- Open Graph / Facebook --&gt;
+&lt;meta property="og:title" content="Título da Página"&gt;
+&lt;meta property="og:description" content="Descrição para compartilhamento"&gt;
+&lt;meta property="og:image" content="URL da imagem para compartilhamento"&gt;
+&lt;meta property="og:url" content="URL da página"&gt;
+&lt;meta property="og:type" content="website"&gt;
+
+&lt;!-- Twitter --&gt;
+&lt;meta name="twitter:card" content="summary_large_image"&gt;
+&lt;meta name="twitter:title" content="Título para Twitter"&gt;
+&lt;meta name="twitter:description" content="Descrição para Twitter"&gt;
+&lt;meta name="twitter:image" content="URL da imagem para Twitter"&gt;</code></pre>
+                    </div>
+                </section>
+            </div>
+
+            <footer class="article-footer">
+                <div class="navigation-links">
+                    <a href="estrutura.html" class="nav-link prev-link">
+                        <i class="fas fa-arrow-left"></i>
+                        <span>Anterior: Estrutura Básica</span>
+                    </a>
+                    <a href="conteudo.html" class="nav-link next-link">
+                        <span>Próximo: Seções de Conteúdo</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </footer>
+        </article>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-about">
+                <div class="footer-logo">
+                    <span class="logo-icon">HTML</span>
+                    <span>Guia HTML5</span>
+                </div>
+                <p>O guia mais completo de referência HTML5 na web. Todas as tags, exemplos práticos e boas práticas em
+                    um só lugar.</p>
+                <div class="social-links">
+                    <a href="https://github.com/NicolasS4" class="social-icon" aria-label="GitHub"><i
+                            class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/nicolas-almir-92773527a/" class="social-icon"
+                        aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-links">
+                <h3>Guia HTML</h3>
+                <ul>
+                    <li><a href="estrutura.html">Estrutura Básica</a></li>
+                    <li><a href="metadados.html">Metadados</a></li>
+                    <li><a href="conteudo.html">Seções de Conteúdo</a></li>
+                    <li><a href="texto.html">Textos e Semântica</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-links">
+                <h3>Recursos</h3>
+                <ul>
+                    <li><a href="midia.html">Imagens e Multimídia</a></li>
+                    <li><a href="tabelas.html">Tabelas</a></li>
+                    <li><a href="formularios.html">Formulários</a></li>
+                    <li><a href="interativo.html">Conteúdo Interativo</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-links">
+                <h3>Ferramentas</h3>
+                <ul>
+                    <li><a href="../ferramentas/extensoes.html">Extensões VS Code</a></li>
+                    <li><a href="../ferramentas/atalhos.html">Atalhos Úteis</a></li>
+                    <li><a href="https://nicolass4.github.io/portfolio-nicolas-almir/">Portfolio</a></li>
+                    <li><a href="https://nicolas.almir.br@gmail.com">Email</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="copyright">
+            <p>&copy; 2025 Guia Completo de HTML. Git Clone permitido.</p>
+        </div>
+    </footer>
+
+    <button id="dark-mode-toggle" class="theme-toggle" aria-label="Alternar modo escuro">
+        <i class="fas fa-moon"></i>
+    </button>
+
+    <a href="#" id="back-to-top" aria-label="Voltar ao topo">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <script src="../js/script.js"></script>
+    <script src="../js/animations.js"></script>
+</body>
+
+</html>
